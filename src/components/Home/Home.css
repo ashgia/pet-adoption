@@ -1,0 +1,77 @@
+/* .right.carousel-control,
+.left.carousel-control {
+  display: none;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+} */
+/* .body {
+  position: absolute;
+} */
+/* .bannerContainer {
+  position: relative;
+} */
+
+.carousel-fade .carousel-item {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/* .imageslide {
+  position: absolute;
+  margin: none;
+  padding: none;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+} */
+
+.navbar-carousel {
+  position: absolute;
+  padding: 30px;
+  margin: 60px;
+  margin-top: 150px;
+}
+
+/* .carousel {
+  position: absolute;
+} */

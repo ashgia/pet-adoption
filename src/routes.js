@@ -6,6 +6,7 @@ import Shelters from "./components/Shelters/Shelters";
 import Donate from "./components/Donate/Donate";
 import Volunteer from "./components/Volunteer/Volunteer";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
+import Registration from "./components/Registration/Registration";
 
 export default (
   <Switch>
@@ -14,5 +15,6 @@ export default (
     <Route path="/donate" component={Donate} />
     <Route path="/volunteer" component={Volunteer} />
     <Route path="/howitworks" component={HowItWorks} />
+    <Route path="/signin" component={Registration} />
   </Switch>
 );
