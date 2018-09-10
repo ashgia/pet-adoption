@@ -72,6 +72,29 @@ body,
   margin-top: 150px;
 }
 
-/* .carousel {
+.getStartedButton {
   position: absolute;
-} */
+  width: 300px;
+  height: 200px;
+  bottom: 0px;
+  right: 25%;
+  left: 50%;
+  margin-left: -150px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.getStartedButton button {
+  background-color: transparent;
+  color: white;
+  padding: 18px 35px;
+  border: 3px solid;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.getStartedButton button:hover {
+  background-color: white;
+  border: white;
+  color: black;
+}

@@ -7,6 +7,9 @@ import Donate from "./components/Donate/Donate";
 import Volunteer from "./components/Volunteer/Volunteer";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import Registration from "./components/Registration/Registration";
+import WizardTwo from "./components/WizardTwo/WizardTwo";
+import WizardThree from "./components/WizardThree/WizardThree";
+import WizardFour from "./components/WizardFour/WizardFour";
 
 export default (
   <Switch>
@@ -15,6 +18,9 @@ export default (
     <Route path="/donate" component={Donate} />
     <Route path="/volunteer" component={Volunteer} />
     <Route path="/howitworks" component={HowItWorks} />
-    <Route path="/signin" component={Registration} />
+    <Route path="/wizardOneRegistration" component={Registration} />
+    <Route path="/wizardTwo" component={WizardTwo} />
+    <Route path="/wizardThree" component={WizardThree} />
+    <Route path="/wizardFour" component={WizardFour} />
   </Switch>
 );

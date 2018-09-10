@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Home.css";
 import { UncontrolledCarousel } from "reactstrap";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -32,6 +33,11 @@ const Home = () => {
     <div className="bannerContainer">
       <div className="navbar-carousel">
         <Navbar />
+      </div>
+      <div className="getStartedButton">
+        <Link to="/wizardOneRegistration">
+          <button>get started</button>
+        </Link>
       </div>
       <div className="carousel">
         <div className="imageslide">
