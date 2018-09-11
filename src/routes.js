@@ -10,6 +10,7 @@ import Registration from "./components/Registration/Registration";
 import WizardTwo from "./components/WizardTwo/WizardTwo";
 import WizardThree from "./components/WizardThree/WizardThree";
 import WizardFour from "./components/WizardFour/WizardFour";
+import wizardTwoShelter from "./components/wizardTwoShelter/wizardTwoShelter";
 
 export default (
   <Switch>
@@ -22,5 +23,6 @@ export default (
     <Route path="/wizardTwo" component={WizardTwo} />
     <Route path="/wizardThree" component={WizardThree} />
     <Route path="/wizardFour" component={WizardFour} />
+    <Route path="/wizardTwoShelter" component={wizardTwoShelter} />
   </Switch>
 );
