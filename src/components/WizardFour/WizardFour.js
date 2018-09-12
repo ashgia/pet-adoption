@@ -116,7 +116,7 @@ class WizardFour extends Component {
               />
             </Col>
           </FormGroup>
-          <Link to="/wizardFour">
+          <Link to="/userProfile">
             <Button
               onClick={e =>
                 this.props.setAdoptionInfo(
