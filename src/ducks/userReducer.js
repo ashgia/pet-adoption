@@ -33,10 +33,9 @@ const UPDATE_SIZE = "UPDATE_SIZE";
 const UPDATE_AGE = "UPDATE_AGE";
 const UPDATE_GOOD_WITH = "UPDATE_GOOD_WITH";
 const SET_ADOPTION_INFO = "SET_ADOPTION_INFO";
-// const SET_USER_INFO = "SET_USER_INFO";
 
 function userReducer(state = initialState, action) {
-  console.log(action.type, action.payload, state);
+  // console.log(action.type, action.payload, state);
   switch (action.type) {
     case UPDATE_NAME:
       return {

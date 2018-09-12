@@ -117,7 +117,7 @@ class WizardFour extends Component {
               onClick={e =>
                 this.props.setAdoptionInfo(
                   this.props.user.fullname,
-                  null,
+                  this.props.user.city,
                   this.props.user.email,
                   this.props.user.phoneNumber,
                   this.props.user.photoURL,

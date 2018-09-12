@@ -10,7 +10,9 @@ import Registration from "./components/Registration/Registration";
 import WizardTwo from "./components/WizardTwo/WizardTwo";
 import WizardThree from "./components/WizardThree/WizardThree";
 import WizardFour from "./components/WizardFour/WizardFour";
-import wizardTwoShelter from "./components/wizardTwoShelter/wizardTwoShelter";
+import WizardTwoShelter from "./components/wizardTwoShelter/WizardTwoShelter";
+import NewAdopt from "./components/NewAdopt/NewAdopt";
+// import NewShelter from "./components/NewShelter/NewShelter";
 
 export default (
   <Switch>
@@ -23,6 +25,8 @@ export default (
     <Route path="/wizardTwo" component={WizardTwo} />
     <Route path="/wizardThree" component={WizardThree} />
     <Route path="/wizardFour" component={WizardFour} />
-    <Route path="/wizardTwoShelter" component={wizardTwoShelter} />
+    <Route path="/wizardTwoShelter" component={WizardTwoShelter} />
+    <Route path="/newAdoptLogin" component={NewAdopt} />
+    {/* <Route path="/newShelterLogin" component={NewShelter} /> */}
   </Switch>
 );
