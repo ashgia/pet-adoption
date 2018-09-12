@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const initialState = {
+  user: {},
   fullname: "",
   email: "",
   phoneNumber: "",
@@ -33,6 +34,7 @@ const UPDATE_SIZE = "UPDATE_SIZE";
 const UPDATE_AGE = "UPDATE_AGE";
 const UPDATE_GOOD_WITH = "UPDATE_GOOD_WITH";
 const SET_ADOPTION_INFO = "SET_ADOPTION_INFO";
+const GET_USER = "GET_USER";
 
 function userReducer(state = initialState, action) {
   // console.log(action.type, action.payload, state);
@@ -108,12 +110,19 @@ function userReducer(state = initialState, action) {
         goodWith: action.payload
       };
 
+    case GET_USER:
+      return {
+        ...state,
+        user: action.payload.data
+      };
+
     default:
       return state;
   }
 }
 
 export function setAdoptionInfo(
+  authid,
   fullname,
   city,
   email,
@@ -129,10 +138,10 @@ export function setAdoptionInfo(
   age,
   goodWith
 ) {
-  console.log(phoneNumber, aboutMe);
   return {
     type: SET_ADOPTION_INFO,
     payload: axios.post("/api/user", {
+      authid,
       fullname,
       city,
       email,
@@ -268,6 +277,13 @@ export function updateGoodWith(goodWith) {
   return {
     type: UPDATE_GOOD_WITH,
     payload: goodWith
+  };
+}
+
+export function getUser() {
+  return {
+    type: GET_USER,
+    payload: axios("/api/user")
   };
 }
 

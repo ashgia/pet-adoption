@@ -16,11 +16,15 @@ import {
   updatePhotoURL,
   updateLiving,
   updateAboutMe,
-  setAdoptionInfo
+  setAdoptionInfo,
+  getUser
 } from "../../ducks/userReducer";
 import { connect } from "react-redux";
 
 class WizardFour extends Component {
+  componentDidMount() {
+    this.props.getUser();
+  }
   render() {
     return (
       <div>
@@ -116,6 +120,7 @@ class WizardFour extends Component {
             <Button
               onClick={e =>
                 this.props.setAdoptionInfo(
+                  this.props.user.user.authid,
                   this.props.user.fullname,
                   this.props.user.city,
                   this.props.user.email,
@@ -163,6 +168,7 @@ export default connect(
     updatePhotoURL,
     updateLiving,
     updateAboutMe,
-    setAdoptionInfo
+    setAdoptionInfo,
+    getUser
   }
 )(WizardFour);

@@ -44,7 +44,7 @@ passport.serializeUser((user, done) => {
   db.get_user(user.id)
     .then(response => {
       if (!response[0]) {
-        db.add_user_auth([user.id, user.displayName])
+        db.add_user_auth(user.id)
           .then(res => done(null, res[0]))
           .catch(err => console.log(err));
       } else {
@@ -80,10 +80,8 @@ app.get(
   })
 );
 
-// Access user, logout user
-app.get("/api/user", getUser, (req, res, next) => {
-  res.status(200).send(students);
-});
+// Access user
+app.get("/api/user", getUser);
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);

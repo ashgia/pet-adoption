@@ -19,6 +19,7 @@ module.exports = {
       goodWith
     } = req.body;
     db.create_user([
+      req.user.authid,
       fullname,
       city,
       email,

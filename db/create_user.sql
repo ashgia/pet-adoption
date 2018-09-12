@@ -1,8 +1,16 @@
-INSERT INTO users( fullname, city, email, phone, photoURL, living, aboutme, species,
-      breed,
-      gender,
-      color,
-      size,
-      age,
-      goodWith )
-VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
+UPDATE users SET fullname = $2, city = $3, email = $4, phone = $5, photoURL = $6, living = $7, aboutme = $8, species = $9,
+      breed = $10,
+      gender = $11,
+      color = $12,
+      size = $13,
+      age = $14,
+      goodWith = $15
+WHERE authid = $1;
+
+
+
+-- SELECT * FROM users 
+-- WHERE authid = $1;
+
+
+
