@@ -1,12 +1,13 @@
 module.exports = {
   createUser: (req, res, next) => {
-    // console.log(req.body);
+    console.log(req.body);
     const db = req.app.get("db");
     const {
       fullname,
       city,
       email,
       phoneNumber,
+      address,
       photoURL,
       living,
       aboutMe,
@@ -17,6 +18,8 @@ module.exports = {
       size,
       age,
       goodWith,
+      mission,
+      policy,
       shelter
     } = req.body;
     db.create_user([
@@ -35,6 +38,9 @@ module.exports = {
       size,
       age,
       goodWith,
+      address,
+      mission,
+      policy,
       shelter
     ])
       .then(() => res.sendStatus(200))

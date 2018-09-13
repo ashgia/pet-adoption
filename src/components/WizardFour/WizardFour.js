@@ -130,6 +130,7 @@ class WizardFour extends Component {
                     this.props.user.city,
                     this.props.user.email,
                     this.props.user.phoneNumber,
+                    this.props.user.address,
                     this.props.user.photoURL,
                     this.props.user.living,
                     this.props.user.aboutMe,
@@ -140,6 +141,8 @@ class WizardFour extends Component {
                     this.props.user.size,
                     this.props.user.age,
                     this.props.user.goodWith,
+                    this.props.user.mission,
+                    this.props.user.policy,
                     this.props.user.shelter
                   )
                 }

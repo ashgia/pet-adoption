@@ -36,7 +36,7 @@ class NavBarSide extends Component {
             </NavbarBrand>
           </div>
           <div className="toggler">
-            <div class="d-flex justify-content-end">
+            <div>
               <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             </div>
             <Collapse isOpen={!this.state.collapsed} navbar>

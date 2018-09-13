@@ -1,5 +1,5 @@
 const getUser = (req, res) => {
-  console.log(req);
+  // console.log(req);
   if (!req.user) res.sendStatus(401);
   else res.status(200).send(req.user);
 };

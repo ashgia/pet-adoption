@@ -5,6 +5,7 @@ const initialState = {
   fullname: "",
   email: "",
   phoneNumber: "",
+  address: "",
   photoURL: "",
   living: "",
   aboutMe: "",
@@ -16,6 +17,8 @@ const initialState = {
   size: "",
   age: "",
   goodWith: "",
+  mission: "",
+  policy: "",
   shelter: "",
   userInfo: ""
 };
@@ -23,6 +26,7 @@ const initialState = {
 const UPDATE_NAME = "UPDATE_NAME";
 const UPDATE_EMAIL = "UPDATE_EMAIL";
 const UPDATE_PHONE_NUMBER = "UPDATE_PHONE_NUMBER";
+const UPDATE_ADDRESS = "UPDATE_ADDRESS";
 const UPDATE_PHOTO_URL = "UPDATE_PHOTO_URL";
 const UPDATE_LIVING = "UPDATE_LIVING";
 const UPDATE_ABOUT_ME = "UPDATE_ABOUT_ME";
@@ -34,6 +38,8 @@ const UPDATE_COLOR = "UPDATE_COLOR";
 const UPDATE_SIZE = "UPDATE_SIZE";
 const UPDATE_AGE = "UPDATE_AGE";
 const UPDATE_GOOD_WITH = "UPDATE_GOOD_WITH";
+const UPDATE_MISSION = "UPDATE_MISSION";
+const UPDATE_POLICY = "UPDATE_POLICY";
 const UPDATE_SHELTER_FLAG = "UPDATE_SHELTER_FLAG";
 const SET_ADOPTION_INFO = "SET_ADOPTION_INFO";
 const GET_USER = "GET_USER";
@@ -55,6 +61,11 @@ function userReducer(state = initialState, action) {
       return {
         ...state,
         phoneNumber: action.payload
+      };
+    case UPDATE_ADDRESS:
+      return {
+        ...state,
+        address: action.payload
       };
     case UPDATE_PHOTO_URL:
       return {
@@ -111,6 +122,16 @@ function userReducer(state = initialState, action) {
         ...state,
         goodWith: action.payload
       };
+    case UPDATE_MISSION:
+      return {
+        ...state,
+        mission: action.payload
+      };
+    case UPDATE_POLICY:
+      return {
+        ...state,
+        policy: action.payload
+      };
 
     case UPDATE_SHELTER_FLAG:
       return {
@@ -135,6 +156,7 @@ export function setAdoptionInfo(
   city,
   email,
   phoneNumber,
+  address,
   photoURL,
   living,
   aboutMe,
@@ -145,8 +167,31 @@ export function setAdoptionInfo(
   size,
   age,
   goodWith,
+  mission,
+  policy,
   shelter
 ) {
+  console.log({
+    authid,
+    fullname,
+    city,
+    email,
+    phoneNumber,
+    address,
+    photoURL,
+    living,
+    aboutMe,
+    species,
+    breed,
+    gender,
+    color,
+    size,
+    age,
+    goodWith,
+    mission,
+    policy,
+    shelter
+  });
   return {
     type: SET_ADOPTION_INFO,
     payload: axios.post("/api/user", {
@@ -155,6 +200,7 @@ export function setAdoptionInfo(
       city,
       email,
       phoneNumber,
+      address,
       photoURL,
       living,
       aboutMe,
@@ -165,6 +211,8 @@ export function setAdoptionInfo(
       size,
       age,
       goodWith,
+      mission,
+      policy,
       shelter
     })
   };
@@ -211,6 +259,12 @@ export function updateNumber(phoneNumber) {
   return {
     type: UPDATE_PHONE_NUMBER,
     payload: phoneNumber
+  };
+}
+export function updateAddress(address) {
+  return {
+    type: UPDATE_ADDRESS,
+    payload: address
   };
 }
 
@@ -287,6 +341,18 @@ export function updateGoodWith(goodWith) {
   return {
     type: UPDATE_GOOD_WITH,
     payload: goodWith
+  };
+}
+export function updateMission(mission) {
+  return {
+    type: UPDATE_MISSION,
+    payload: mission
+  };
+}
+export function updatePolicy(policy) {
+  return {
+    type: UPDATE_POLICY,
+    payload: policy
   };
 }
 
