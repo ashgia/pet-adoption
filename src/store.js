@@ -2,10 +2,12 @@ import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import promiseMiddleware from "redux-promise-middleware";
 
 import userReducer from "./ducks/userReducer";
+// import shelterReducer from "./ducks/shelterReducer";
 
 // Combine reducers into one
 const combinedReducers = combineReducers({
   user: userReducer
+  // shelter: shelterReducer
 });
 
 // devtools
