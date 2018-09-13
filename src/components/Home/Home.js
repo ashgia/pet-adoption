@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import "./Home.css";
 import { UncontrolledCarousel } from "reactstrap";
 import Navbar from "../Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { getUser } from "../../ducks/authReducer";
+// import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -35,9 +37,9 @@ const Home = () => {
         <Navbar />
       </div>
       <div className="getStartedButton">
-        <Link to="/wizardOneRegistration">
+        <a href="http://localhost:3001/newAdoptLogin">
           <button>get started</button>
-        </Link>
+        </a>
       </div>
       <div className="carousel">
         <div className="imageslide">
@@ -58,4 +60,11 @@ const Home = () => {
   );
 };
 
-export default Home;
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  { getUser }
+)(Home);
+
+// export default Home;

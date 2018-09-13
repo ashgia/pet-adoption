@@ -139,7 +139,8 @@ class WizardFour extends Component {
                     this.props.user.color,
                     this.props.user.size,
                     this.props.user.age,
-                    this.props.user.goodWith
+                    this.props.user.goodWith,
+                    this.props.user.shelter
                   )
                 }
               >
@@ -153,16 +154,6 @@ class WizardFour extends Component {
   }
 }
 
-// function mapStatetoProps(state) {
-//   return {
-//     name: state.name,
-//     email: state.email,
-//     phoneNumber: state.phoneNumber,
-//     photoURL: state.photoURL,
-//     living: state.living,
-//     aboutMe: state.aboutMe
-//   };
-// }
 const mapStatetoProps = state => state;
 
 export default connect(

@@ -4,7 +4,8 @@ UPDATE users SET fullname = $2, city = $3, email = $4, phone = $5, photoURL = $6
       color = $12,
       size = $13,
       age = $14,
-      goodWith = $15
+      goodWith = $15,
+      shelter = $16
 WHERE authid = $1;
 
 

@@ -1,6 +1,6 @@
 module.exports = {
   createUser: (req, res, next) => {
-    console.log(req.body);
+    // console.log(req.body);
     const db = req.app.get("db");
     const {
       fullname,
@@ -16,7 +16,8 @@ module.exports = {
       color,
       size,
       age,
-      goodWith
+      goodWith,
+      shelter
     } = req.body;
     db.create_user([
       req.user.authid,
@@ -33,7 +34,8 @@ module.exports = {
       color,
       size,
       age,
-      goodWith
+      goodWith,
+      shelter
     ])
       .then(() => res.sendStatus(200))
       .catch(err => {

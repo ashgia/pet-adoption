@@ -16,6 +16,7 @@ const initialState = {
   size: "",
   age: "",
   goodWith: "",
+  shelter: "",
   userInfo: ""
 };
 
@@ -33,11 +34,12 @@ const UPDATE_COLOR = "UPDATE_COLOR";
 const UPDATE_SIZE = "UPDATE_SIZE";
 const UPDATE_AGE = "UPDATE_AGE";
 const UPDATE_GOOD_WITH = "UPDATE_GOOD_WITH";
+const UPDATE_SHELTER_FLAG = "UPDATE_SHELTER_FLAG";
 const SET_ADOPTION_INFO = "SET_ADOPTION_INFO";
 const GET_USER = "GET_USER";
 
 function userReducer(state = initialState, action) {
-  // console.log(action.type, action.payload, state);
+  console.log(action.type, action.payload, state);
   switch (action.type) {
     case UPDATE_NAME:
       return {
@@ -110,6 +112,12 @@ function userReducer(state = initialState, action) {
         goodWith: action.payload
       };
 
+    case UPDATE_SHELTER_FLAG:
+      return {
+        ...state,
+        shelter: action.payload
+      };
+
     case GET_USER:
       return {
         ...state,
@@ -136,7 +144,8 @@ export function setAdoptionInfo(
   color,
   size,
   age,
-  goodWith
+  goodWith,
+  shelter
 ) {
   return {
     type: SET_ADOPTION_INFO,
@@ -155,7 +164,8 @@ export function setAdoptionInfo(
       color,
       size,
       age,
-      goodWith
+      goodWith,
+      shelter
     })
   };
 }
@@ -277,6 +287,13 @@ export function updateGoodWith(goodWith) {
   return {
     type: UPDATE_GOOD_WITH,
     payload: goodWith
+  };
+}
+
+export function updateShelterFlag(shelter) {
+  return {
+    type: UPDATE_SHELTER_FLAG,
+    payload: shelter
   };
 }
 

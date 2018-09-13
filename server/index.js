@@ -75,8 +75,8 @@ app.post("/api/user", user_controller.createUser);
 app.get(
   "/newAdoptLogin",
   passport.authenticate("auth0", {
-    successRedirect: "http://localhost:3000/#/WizardTwo",
-    failureRedirect: "http://localhost:3001/newAdoptLogin"
+    successRedirect: "http://localhost:3000/#/WizardOneRegistration",
+    failureRedirect: "http://localhost:3001/"
   })
 );
 
