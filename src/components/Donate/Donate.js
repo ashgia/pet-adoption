@@ -1,8 +1,16 @@
 import React, { Component } from "react";
+import NavBarSide from "../NavBarSide/NavBarSide";
 
 class Donate extends Component {
   render() {
-    return <div>Donate</div>;
+    return (
+      <div>
+        <div className="navbar">
+          <NavBarSide />
+        </div>
+        Donate
+      </div>
+    );
   }
 }
 
