@@ -13,7 +13,7 @@ import WizardFour from "./components/WizardFour/WizardFour";
 import UserProfile from "./components/UserProfile/UserProfile";
 import WizardTwoShelter from "./components/wizardTwoShelter/WizardTwoShelter";
 import WizardThreeShelter from "./components/WizardThreeShelter/WizardThreeShelter";
-
+import ShelterProfile from "./components/ShelterProfile/ShelterProfile";
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
@@ -28,5 +28,6 @@ export default (
     <Route path="/userProfile" component={UserProfile} />
     <Route path="/wizardTwoShelter" component={WizardTwoShelter} />
     <Route path="/wizardThreeShelter" component={WizardThreeShelter} />
+    <Route path="/shelterProfile" component={ShelterProfile} />
   </Switch>
 );

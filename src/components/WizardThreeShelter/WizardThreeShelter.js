@@ -151,7 +151,7 @@ class WizardThreeShelter extends Component {
                 />
               </Col>
             </FormGroup>
-            <Link to="/userProfile">
+            <Link to="/shelterProfile">
               <Button
                 onClick={e =>
                   this.props.setAdoptionInfo(

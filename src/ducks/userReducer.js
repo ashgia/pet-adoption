@@ -19,8 +19,7 @@ const initialState = {
   goodWith: "",
   mission: "",
   policy: "",
-  shelter: "",
-  userInfo: ""
+  shelter: ""
 };
 
 const UPDATE_NAME = "UPDATE_NAME";
@@ -171,27 +170,27 @@ export function setAdoptionInfo(
   policy,
   shelter
 ) {
-  console.log({
-    authid,
-    fullname,
-    city,
-    email,
-    phoneNumber,
-    address,
-    photoURL,
-    living,
-    aboutMe,
-    species,
-    breed,
-    gender,
-    color,
-    size,
-    age,
-    goodWith,
-    mission,
-    policy,
-    shelter
-  });
+  // console.log({
+  //   authid,
+  //   fullname,
+  //   city,
+  //   email,
+  //   phoneNumber,
+  //   address,
+  //   photoURL,
+  //   living,
+  //   aboutMe,
+  //   species,
+  //   breed,
+  //   gender,
+  //   color,
+  //   size,
+  //   age,
+  //   goodWith,
+  //   mission,
+  //   policy,
+  //   shelter
+  // });
   return {
     type: SET_ADOPTION_INFO,
     payload: axios.post("/api/user", {
@@ -217,29 +216,6 @@ export function setAdoptionInfo(
     })
   };
 }
-
-// export function setUserInfo(
-//   fullname,
-//   city,
-//   email,
-//   phone,
-//   photoURL,
-//   living,
-//   aboutme
-// ) {
-//   return {
-//     type: SET_USER_INFO,
-//     payload: axios.post("/api/user", {
-//       fullname,
-//       city,
-//       email,
-//       phone,
-//       photoURL,
-//       living,
-//       aboutme
-//     })
-//   };
-// }
 
 export function updateName(fullname) {
   return {
