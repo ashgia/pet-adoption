@@ -3,6 +3,20 @@ import { connect } from "react-redux";
 import NavBarSide from "../NavBarSide/NavBarSide";
 import Input from "../Input/Input";
 import { getShelters } from "../../ducks/userReducer";
+import {
+  Card,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardColumns,
+  CardSubtitle,
+  CardLink,
+  CardBody,
+  Col,
+  Row,
+  Container
+} from "reactstrap";
+import "./Shelters.css";
 
 class Shelters extends Component {
   constructor(props) {
@@ -30,10 +44,32 @@ class Shelters extends Component {
       .map(shelter => {
         if (shelter.city.includes(this.state.search)) {
           return (
-            <div className="sheltercard">
-              <div className="fullname">{shelter.fullname}</div>
-              <div className="city">{shelter.city}</div>
-            </div>
+            // <CardColumns sm="4">
+            <Col sm="3">
+              <CardDeck>
+                <Card>
+                  <CardBody>
+                    <CardTitle>
+                      <div className="fullname">{shelter.fullname}</div>
+                    </CardTitle>
+                    <CardSubtitle>
+                      <div className="city">{shelter.city}</div>
+                    </CardSubtitle>
+                  </CardBody>
+                  <img
+                    width="100%"
+                    src={shelter.photourl}
+                    alt="Card image cap"
+                  />
+                  <CardBody>
+                    <CardText>{shelter.address}</CardText>
+                    <CardLink href="#">About Us</CardLink>
+                    {/* <CardLink href="#">Contact</CardLink> */}
+                  </CardBody>
+                </Card>
+              </CardDeck>
+            </Col>
+            /* </CardColumns> */
           );
         }
       });
@@ -51,10 +87,10 @@ class Shelters extends Component {
             />
           </div>
         </div>
-        <div className="usersection">
-          <div className="usertitle"> Shelters: </div>
-          <div className="usercard"> {sheltersDisplay}</div>
-        </div>
+
+        <Container fluid>
+          <Row>{sheltersDisplay}</Row>
+        </Container>
       </div>
     );
   }

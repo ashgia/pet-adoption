@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import NavBarShelter from "../NavBarShelter/NavBarShelter";
 import Input from "../Input/Input";
 import { getUsers } from "../../ducks/userReducer";
+import "./Users.css";
 
 class Users extends Component {
   constructor(props) {
@@ -56,7 +57,7 @@ class Users extends Component {
         </div>
         <div className="usersection">
           <div className="usertitle"> Users: </div>
-          <div className="usercard"> {usersDisplay}</div>
+          <div className="usercardbox"> {usersDisplay}</div>
         </div>
       </div>
     );

@@ -57,7 +57,12 @@ class NavBarSide extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link4" tag={Link} to="/donate">
+                  <NavLink className="nav-link4" tag={Link} to="/volunteer">
+                    Volunteer
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link5" tag={Link} to="/donate">
                     Donate
                   </NavLink>
                 </NavItem>
