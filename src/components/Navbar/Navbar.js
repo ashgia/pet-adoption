@@ -37,6 +37,11 @@ class Navbar extends Component {
       <Nav vertical className="navbar">
         <NavItem>
           <NavLink className="nav-link1" tag={Link} to="/">
+            <img
+              className="img1"
+              src="../../images/bluedog.jpg"
+              alt="bluedog"
+            />
             Home
           </NavLink>
         </NavItem>

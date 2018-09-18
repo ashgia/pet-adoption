@@ -4,14 +4,14 @@ import Geosuggest from "react-geosuggest";
 import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
 import { connect } from "react-redux";
 import { updateCity } from "../../ducks/userReducer";
-import NavBarSide from "../NavBarSide/NavBarSide";
+import NavBarShelter from "../NavBarShelter/NavBarShelter";
 
 class WizardTwoShelter extends Component {
   render() {
     return (
       <div className="wizardtwoshelterpage">
         <div className="navbar">
-          <NavBarSide />
+          <NavBarShelter />
         </div>
         <div>
           <h1>What City Are You In?</h1>

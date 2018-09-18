@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import NavBarSide from "../NavBarSide/NavBarSide";
+import NavBarShelter from "../NavBarShelter/NavBarShelter";
 import {
   Col,
   Button,
@@ -32,7 +32,7 @@ class WizardThreeShelter extends Component {
     return (
       <div>
         <div className="navbar">
-          <NavBarSide />
+          <NavBarShelter />
         </div>
         <div>
           <h1>Getting To Know You</h1>

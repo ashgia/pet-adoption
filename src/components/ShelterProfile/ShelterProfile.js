@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import NavBarSide from "../NavBarSide/NavBarSide";
+import NavBarShelter from "../NavBarShelter/NavBarShelter";
 import {
   getUser,
   updateAboutMe,
@@ -82,7 +82,7 @@ class ShelterProfile extends Component {
     return (
       <div className="body-profile-page">
         <div className="navbar">
-          <NavBarSide />
+          <NavBarShelter />
         </div>
         <div>
           <h1>User Profile</h1>

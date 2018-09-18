@@ -42,6 +42,8 @@ const UPDATE_POLICY = "UPDATE_POLICY";
 const UPDATE_SHELTER_FLAG = "UPDATE_SHELTER_FLAG";
 const SET_ADOPTION_INFO = "SET_ADOPTION_INFO";
 const GET_USER = "GET_USER";
+const GET_USERS = "GET_USERS";
+const GET_SHELTERS = "GET_SHELTERS";
 
 function userReducer(state = initialState, action) {
   console.log(action.type, action.payload, state);
@@ -139,6 +141,18 @@ function userReducer(state = initialState, action) {
       };
 
     case GET_USER:
+      return {
+        ...state,
+        user: action.payload.data
+      };
+
+    case GET_USERS:
+      return {
+        ...state,
+        user: action.payload.data
+      };
+
+    case GET_SHELTERS:
       return {
         ...state,
         user: action.payload.data
@@ -346,4 +360,17 @@ export function getUser() {
   };
 }
 
+export function getUsers() {
+  return {
+    type: GET_USERS,
+    payload: axios("/api/users")
+  };
+}
+
+export function getShelters() {
+  return {
+    type: GET_SHELTERS,
+    payload: axios("/api/shelters")
+  };
+}
 export default userReducer;
