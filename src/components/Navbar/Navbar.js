@@ -60,6 +60,11 @@ class Navbar extends Component {
             Donate
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink className="nav-link5" tag={Link} to="/uploadpic">
+            upload pic
+          </NavLink>
+        </NavItem>
       </Nav>
     );
   }

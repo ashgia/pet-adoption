@@ -15,6 +15,7 @@ import WizardTwoShelter from "./components/wizardTwoShelter/WizardTwoShelter";
 import WizardThreeShelter from "./components/WizardThreeShelter/WizardThreeShelter";
 import ShelterProfile from "./components/ShelterProfile/ShelterProfile";
 import Users from "./components/Users/Users";
+import UploadPic from "./components/UploadPic/UploadPic";
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
@@ -31,5 +32,6 @@ export default (
     <Route path="/wizardThreeShelter" component={WizardThreeShelter} />
     <Route path="/shelterProfile" component={ShelterProfile} />
     <Route path="/users" component={Users} />
+    <Route path="/uploadpic" component={UploadPic} />
   </Switch>
 );
