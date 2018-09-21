@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import firebase from "firebase";
 import firebaseinit from "../../firebaseinit";
 import FileUploader from "react-firebase-file-uploader";
 
 class UploadPic extends Component {
   state = {
-    username: "",
+    // username: "",
     avatar: "",
-    isUploading: false,
-    progress: 0,
+    // isUploading: false,
+    // progress: 0,
     avatarURL: ""
   };
 
@@ -21,7 +20,10 @@ class UploadPic extends Component {
     console.error(error);
   };
   handleUploadSuccess = filename => {
-    this.setState({ avatar: filename, progress: 100, isUploading: false });
+    this.setState({
+      avatar: filename
+      // , progress: 100, isUploading: false
+    });
     firebaseinit
       .storage()
       .ref("images")
@@ -34,9 +36,8 @@ class UploadPic extends Component {
     return (
       <div>
         <form>
-
-          <label>Avatar:</label>
-          {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
+          <label>Image: </label>
+          {this.state.isUploading && <p>{this.state.progress}</p>}
           {this.state.avatarURL && <img src={this.state.avatarURL} />}
           <FileUploader
             accept="image/*"
