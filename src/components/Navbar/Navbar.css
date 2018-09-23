@@ -54,12 +54,17 @@
   width: 384px;
   text-align: left;
 }
+
 ul:hover li a {
   color: black;
 }
 
 ul li:hover a {
   color: white;
+  transform: translate(25px, 0);
+  -webkit-transform: translate(25px, 0); /** Chrome & Safari **/
+  -o-transform: translate(25px, 0); /** Opera **/
+  -moz-transform: translate(25px, 0); /** Firefox **/
 }
 .img1 {
   /* background-image: url("https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350"); */
@@ -106,6 +111,8 @@ ul li:hover a {
   font-size: 55px;
   font-weight: 400;
   letter-spacing: 3px;
-  padding-top: 0;
-  padding-bottom: 0;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.2s ease-in-out; /** Firefox **/
+  -o-transition: all 0.2s ease-in-out; /** Opera **/
 }
