@@ -43,11 +43,23 @@
 
 } */
 
-.nav-link1 {
-  color: white;
+.navbar {
+  display: flex;
+  align-items: left;
 }
-.nav-link1:hover {
+.nav-link1 {
+  display: flex;
+  color: white;
+  height: 60px;
+  width: 384px;
+  text-align: left;
+}
+ul:hover li a {
   color: black;
+}
+
+ul li:hover a {
+  color: white;
 }
 .img1 {
   /* background-image: url("https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&h=350"); */
@@ -66,13 +78,34 @@
 }
 .nav-link2 {
   color: white;
+  height: 60px;
+  width: 384px;
+  text-align: left;
 }
 .nav-link3 {
   color: white;
+  height: 60px;
+  width: 384px;
+  text-align: left;
 }
 .nav-link4 {
   color: white;
+  height: 60px;
+  width: 384px;
+  text-align: left;
 }
-.nav-link4:hover {
-  color: black;
+
+.nav-link5 {
+  color: white;
+  height: 60px;
+  width: 384px;
+  text-align: left;
+}
+.nav-link {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
