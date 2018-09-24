@@ -1,0 +1,116 @@
+.donate-body {
+  display: flex;
+  position: relative;
+}
+
+.donate-boxcolor {
+  width: 100%;
+  position: absolute;
+  background-color: rgb(169, 224, 243);
+  height: 650px;
+}
+
+.donate-textbox {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: auto;
+  padding: 50px;
+  padding-bottom: 90px;
+}
+
+.donate-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.donate-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 27px;
+}
+
+.donate2-section {
+  display: flex;
+}
+.donate2-image {
+  display: flex;
+  position: absolute;
+  margin-left: 150px;
+}
+
+.donate2-text {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  margin-left: auto;
+  margin-right: 170px;
+  margin-top: 430px;
+}
+
+.donate2-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.donate2-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 20px;
+}
+
+.donate3-section {
+  display: flex;
+}
+.donate3-image {
+  display: flex;
+  position: absolute;
+  margin-left: 590px;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.donate3-text {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  margin-left: auto;
+  margin-left: 170px;
+  margin-top: 200px;
+}
+
+.donate3-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.donate3-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 20px;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  bottom: 0;
+  color: black;
+  text-align: center;
+}

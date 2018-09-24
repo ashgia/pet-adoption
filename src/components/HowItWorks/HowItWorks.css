@@ -1,0 +1,116 @@
+.howitworks-body {
+  display: flex;
+  position: relative;
+}
+
+.howitworks-boxcolor {
+  width: 100%;
+  position: absolute;
+  background-color: rgb(135, 205, 166);
+  height: 650px;
+}
+
+.howitworks-textbox {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: auto;
+  padding: 50px;
+  padding-bottom: 90px;
+}
+
+.howitworks-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.howitworks-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 27px;
+}
+
+.howitworks2-section {
+  display: flex;
+}
+.howitworks2-image {
+  display: flex;
+  position: absolute;
+  margin-left: 150px;
+}
+
+.howitworks2-text {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  margin-left: auto;
+  margin-right: 170px;
+  margin-top: 430px;
+}
+
+.howitworks2-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.howitworks2-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 20px;
+}
+
+.howitworks3-section {
+  display: flex;
+}
+.howitworks3-image {
+  display: flex;
+  position: absolute;
+  margin-left: 590px;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.howitworks3-text {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  margin-left: auto;
+  margin-left: 170px;
+  margin-top: 200px;
+}
+
+.howitworks3-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.howitworks3-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 20px;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  bottom: 0;
+  color: black;
+  text-align: center;
+}

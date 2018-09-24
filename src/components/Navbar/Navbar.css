@@ -43,10 +43,6 @@
 
 } */
 
-.navbar {
-  display: flex;
-  align-items: left;
-}
 .nav-link1 {
   display: flex;
   color: white;
@@ -55,6 +51,13 @@
   text-align: left;
 }
 
+/* .nav-link1:hover {
+  background-image: url(https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
 ul:hover li a {
   color: black;
 }
@@ -81,6 +84,7 @@ ul li:hover a {
 .nav-link1:hover + img {
   opacity: 1;
 }
+
 .nav-link2 {
   color: white;
   height: 60px;
@@ -107,8 +111,8 @@ ul li:hover a {
   text-align: left;
 }
 .nav-link {
-  font-family: "Archivo Narrow", sans-serif;
-  font-size: 55px;
+  font-family: "Bitter", serif;
+  font-size: 48px;
   font-weight: 400;
   letter-spacing: 3px;
   transition: all 0.2s ease-in-out;

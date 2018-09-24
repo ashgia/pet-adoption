@@ -9,16 +9,9 @@ class Navbar extends Component {
       <div>
         <Nav vertical className="navbar">
           <NavItem>
-            <div className="float-leftclassName">
-              <NavLink className="nav-link1" tag={Link} to="/">
-                <img
-                  className="img1"
-                  src="../../images/bluedog.jpg"
-                  alt="bluedog"
-                />
-                Home
-              </NavLink>
-            </div>
+            <NavLink className="nav-link1" tag={Link} to="/">
+              Home
+            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink className="nav-link2" tag={Link} to="/howitworks">

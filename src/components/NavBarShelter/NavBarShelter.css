@@ -1,36 +1,21 @@
-/* .navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.nav-link {
-  display: flex;
-
-  position: absolute;
-  font-family: "Oswald";
-  font-size: 16px;
-  letter-spacing: 3px;
-} */
-
-.navbar-side {
+.navbar-shelter {
   display: flex;
   flex-direction: row;
   width: 100%;
   margin-top: 20px;
   padding-bottom: 30px;
 }
-.side-nav-link1 {
+.shelter-nav-link1 {
   color: black;
   height: 30px;
-  width: 740px;
+  width: 600px;
   text-align: left;
   font-size: 20px;
   font-family: "Bitter", serif;
   letter-spacing: 1px;
 }
 
-.side-nav-link2 {
+.shelter-nav-link2 {
   color: black;
   height: 30px;
   width: 160px;
@@ -38,7 +23,7 @@
   font-size: 16px;
   letter-spacing: 1px;
 }
-.side-nav-link3 {
+.shelter-nav-link3 {
   color: black;
   height: 30px;
   width: 110px;
@@ -46,7 +31,7 @@
   font-size: 16px;
   letter-spacing: 1px;
 }
-.side-nav-link4 {
+.shelter-nav-link4 {
   color: black;
   height: 30px;
   width: 125px;
@@ -55,7 +40,15 @@
   letter-spacing: 1px;
 }
 
-.side-nav-link5 {
+.shelter-nav-link5 {
+  color: black;
+  height: 30px;
+  width: 140px;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.shelter-nav-link6 {
   color: black;
   height: 30px;
   width: 100px;
