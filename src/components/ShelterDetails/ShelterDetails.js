@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarSide from "../NavBarSide/NavBarSide";
-import { getUser } from "../../ducks/userReducer";
+import { getShelter } from "../../ducks/userReducer";
 
 class ShelterDetails extends Component {
   constructor(props) {
@@ -11,25 +11,14 @@ class ShelterDetails extends Component {
     };
   }
 
-  componentDidMount() {
-    this.props.getUser();
+  async componentDidMount() {
+    await this.props.getShelter(this.props.match.params.id).then(response => {
+      console.log(response);
+      this.setState({ shelter: response.value.data[0] });
+    });
   }
 
-  //   getShelter() {
-  //     this.props.shelters.map(
-  //       e =>
-  //         parseInt(this.props.match.params.id) === e.userid
-  //           ? this.setState({ shelter: e })
-  //           : null
-  //     );
-  //   }
   render() {
-    // this.props.shelters.map(
-    //   e =>
-    //     parseInt(this.props.match.params.id) === e.userid
-    //       ? this.setState({ shelter: e })
-    //       : null
-    // );
     return (
       <div className="body-profile-page">
         <div className="navbar">
@@ -73,11 +62,12 @@ class ShelterDetails extends Component {
     );
   }
 }
+
 const mapStateToProps = state => state;
 
 export default connect(
   mapStateToProps,
   {
-    getUser
+    getShelter
   }
 )(ShelterDetails);

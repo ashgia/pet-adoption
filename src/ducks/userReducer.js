@@ -381,10 +381,11 @@ export function getShelters() {
   };
 }
 
-export function getShelter() {
+export function getShelter(id) {
+  console.log(id);
   return {
     type: GET_SHELTER,
-    payload: axios("/api/shelters:id")
+    payload: axios(`/api/shelter/${id}`)
   };
 }
 export default userReducer;

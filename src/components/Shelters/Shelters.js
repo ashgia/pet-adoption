@@ -68,7 +68,7 @@ class Shelters extends Component {
                         <CardText>{shelter.address}</CardText>
                         {/* <CardLink href="#">About Us</CardLink> */}
                         <Link
-                          to={`/shelters/${shelter.userid}`}
+                          to={`/shelter/${shelter.userid}`}
                           className="shelter-link"
                         >
                           About Us

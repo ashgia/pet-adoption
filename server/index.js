@@ -87,7 +87,7 @@ app.get("/api/users", getUsers);
 
 //Access shelters
 app.get("/api/shelters", getShelters);
-app.get("/api/shelters/:id", getShelter);
+app.get("/api/shelter/:id", getShelter);
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);

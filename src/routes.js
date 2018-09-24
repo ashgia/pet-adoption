@@ -20,7 +20,7 @@ import ShelterDetails from "./components/ShelterDetails/ShelterDetails";
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route path="/shelters" component={Shelters} />
+    <Route exact path="/shelters" component={Shelters} />
     <Route path="/donate" component={Donate} />
     <Route path="/volunteer" component={Volunteer} />
     <Route path="/howitworks" component={HowItWorks} />
@@ -34,6 +34,6 @@ export default (
     <Route path="/shelterProfile" component={ShelterProfile} />
     <Route path="/users" component={Users} />
     <Route path="/uploadpic" component={UploadPic} />
-    <Route path="/shelters/:id" component={ShelterDetails} />
+    <Route path="/shelter/:id" component={ShelterDetails} />
   </Switch>
 );
