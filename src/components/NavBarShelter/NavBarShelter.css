@@ -14,6 +14,9 @@
   font-family: "Bitter", serif;
   letter-spacing: 1px;
 }
+.shelter-nav-link1:hover {
+  color: white;
+}
 
 .shelter-nav-link2 {
   color: black;
@@ -23,6 +26,9 @@
   font-size: 16px;
   letter-spacing: 1px;
 }
+.shelter-nav-link2:hover {
+  color: white;
+}
 .shelter-nav-link3 {
   color: black;
   height: 30px;
@@ -31,6 +37,9 @@
   font-size: 16px;
   letter-spacing: 1px;
 }
+.shelter-nav-link3:hover {
+  color: white;
+}
 .shelter-nav-link4 {
   color: black;
   height: 30px;
@@ -38,6 +47,9 @@
   text-align: left;
   font-size: 16px;
   letter-spacing: 1px;
+}
+.shelter-nav-link4:hover {
+  color: white;
 }
 
 .shelter-nav-link5 {
@@ -48,6 +60,9 @@
   font-size: 16px;
   letter-spacing: 1px;
 }
+.shelter-nav-link5:hover {
+  color: white;
+}
 .shelter-nav-link6 {
   color: black;
   height: 30px;
@@ -55,4 +70,7 @@
   text-align: left;
   font-size: 16px;
   letter-spacing: 1px;
+}
+.shelter-nav-link6:hover {
+  color: white;
 }

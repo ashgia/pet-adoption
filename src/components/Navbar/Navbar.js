@@ -6,30 +6,30 @@ import { Nav, NavItem, NavLink } from "reactstrap";
 class Navbar extends Component {
   render() {
     return (
-      <div>
-        <Nav vertical className="navbar">
+      <div id="navbarmain">
+        <Nav vertical id="navbar">
           <NavItem>
-            <NavLink className="nav-link1" tag={Link} to="/">
+            <NavLink id="nav-link1" tag={Link} to="/">
               Home
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link2" tag={Link} to="/howitworks">
+            <NavLink id="nav-link2" tag={Link} to="/howitworks">
               How It Works
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link3" tag={Link} to="/shelters">
+            <NavLink id="nav-link3" tag={Link} to="/shelters">
               Shelters
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link4" tag={Link} to="/volunteer">
+            <NavLink id="nav-link4" tag={Link} to="/volunteer">
               Volunteer
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link5" tag={Link} to="/donate">
+            <NavLink id="nav-link5" tag={Link} to="/donate">
               Donate
             </NavLink>
           </NavItem>
