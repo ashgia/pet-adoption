@@ -1,16 +1,16 @@
-.registration-body {
+.wizardtwoshelter-body {
   display: flex;
   position: relative;
 }
 
-.registration-boxcolor {
+.wizardtwoshelter-boxcolor {
   width: 100%;
   position: absolute;
-  background-color: rgb(217, 199, 232);
+  background-color: rgb(195, 165, 220);
   height: 650px;
 }
 
-.registration-textbox {
+.wizardtwoshelter-textbox {
   display: flex;
   flex-direction: column;
   width: 65%;
@@ -22,7 +22,7 @@
   background-color: white;
 }
 
-.registration-title {
+.wizardtwoshelter-title {
   display: flex;
   justify-content: flex-start;
   font-family: "Bitter", serif;
@@ -31,7 +31,7 @@
   height: 30px;
 }
 
-.registration-button {
+.wizardtwoshelter-button {
   display: flex;
   justify-content: flex-start;
   font-family: "Bitter", serif;
@@ -40,13 +40,13 @@
   padding: none;
 }
 
-.reg-lowertext-container {
+.wizardtwoshelter-lowertext-container {
   display: flex;
   width: 50%;
   padding: 50px;
   margin-left: 570px;
 }
-.registration-lowertext {
+.wizardtwoshelter-lowertext {
   display: flex;
   justify-content: flex-end;
   font-family: "Bitter", serif;

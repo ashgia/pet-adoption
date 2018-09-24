@@ -1,0 +1,72 @@
+.card {
+  height: 480px;
+  width: 250px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.shelters-body {
+  display: flex;
+  position: relative;
+}
+
+.shelters-boxcolor {
+  width: 100%;
+  position: absolute;
+  background-color: rgb(236, 194, 135);
+  height: 650px;
+}
+
+.shelters-textbox {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: auto;
+  padding: 50px;
+  padding-bottom: 90px;
+}
+.shelters-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 17px;
+  height: 30px;
+}
+
+.shelters-info {
+  display: flex;
+  text-align: left;
+  font-family: "Bitter", serif;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.search-title {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+
+  font-size: 17px;
+  height: 30px;
+}
+
+.search-input-container {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: none;
+}
+
+input {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 3px;
+  padding-top: none;
+}
+.search-input {
+  margin-top: 5px;
+  padding-bottom: none;
+}

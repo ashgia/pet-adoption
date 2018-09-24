@@ -46,51 +46,69 @@ class Shelters extends Component {
           return (
             // <CardColumns sm="4">
             <Col sm="3">
-              <CardDeck>
-                <Card>
-                  <CardBody>
-                    <CardTitle>
-                      <div className="fullname">{shelter.fullname}</div>
-                    </CardTitle>
-                    <CardSubtitle>
-                      <div className="city">{shelter.city}</div>
-                    </CardSubtitle>
-                  </CardBody>
-                  <img
-                    width="100%"
-                    src={shelter.photourl}
-                    alt="Card image cap"
-                  />
-                  <CardBody>
-                    <CardText>{shelter.address}</CardText>
-                    <CardLink href="#">About Us</CardLink>
-                    {/* <CardLink href="#">Contact</CardLink> */}
-                  </CardBody>
-                </Card>
-              </CardDeck>
+              <div className="carddeck">
+                <CardDeck>
+                  <div className="carddeck-single">
+                    <Card>
+                      <CardBody>
+                        <CardTitle>
+                          <div className="fullname">{shelter.fullname}</div>
+                        </CardTitle>
+                        <CardSubtitle>
+                          <div className="city">{shelter.city}</div>
+                        </CardSubtitle>
+                      </CardBody>
+                      <img
+                        width="100%"
+                        src={shelter.photourl}
+                        alt="Card image cap"
+                      />
+                      <CardBody>
+                        <CardText>{shelter.address}</CardText>
+                        <CardLink href="#">About Us</CardLink>
+                        {/* <CardLink href="#">Contact</CardLink> */}
+                      </CardBody>
+                    </Card>
+                  </div>
+                </CardDeck>
+              </div>
             </Col>
-            /* </CardColumns> */
           );
         }
       });
     return (
-      <div className="shelterpage">
-        <div className="navbar">
-          <NavBarSide />
-        </div>
-        <div className="search-input">
-          <div className="search-title">Search for Shelters by City:</div>
-          <div className="search-input">
-            <Input
-              changed={e => this.filterHandler(e.target.value)}
-              placeholder="Search Shelter"
-            />
+      <div className="shelters-body">
+        <div className="shelters-boxcolor">
+          <div className="navbar">
+            <NavBarSide />
           </div>
-        </div>
+          <div className="shelters-textbox">
+            <div className="shelters-title">
+              <p>Shelters Near You</p>
+            </div>
+            <div className="shelters-info">
+              <p>
+                Wobbegong shark peaclam swimming. Peppered moray clownfish
+                hawkfish at seahorse hammerhead a funny snake eel. Colorful
+                soldierfish banded sole jump.
+              </p>
+            </div>
+            <div className="search-input-container">
+              <div className="search-title">Search by City</div>
+              <div className="search-input">
+                <Input
+                  className="search-input-box"
+                  changed={e => this.filterHandler(e.target.value)}
+                  placeholder="Search Shelter"
+                />
+              </div>
+            </div>
+          </div>
 
-        <Container fluid>
-          <Row>{sheltersDisplay}</Row>
-        </Container>
+          <Container fluid>
+            <Row>{sheltersDisplay}</Row>
+          </Container>
+        </div>
       </div>
     );
   }
