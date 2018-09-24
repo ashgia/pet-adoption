@@ -44,6 +44,7 @@ const SET_ADOPTION_INFO = "SET_ADOPTION_INFO";
 const GET_USER = "GET_USER";
 const GET_USERS = "GET_USERS";
 const GET_SHELTERS = "GET_SHELTERS";
+const GET_SHELTER = "GET_SHELTER";
 
 function userReducer(state = initialState, action) {
   console.log(action.type, action.payload, state);
@@ -153,6 +154,12 @@ function userReducer(state = initialState, action) {
       };
 
     case GET_SHELTERS:
+      return {
+        ...state,
+        user: action.payload.data
+      };
+
+    case GET_SHELTER:
       return {
         ...state,
         user: action.payload.data
@@ -371,6 +378,13 @@ export function getShelters() {
   return {
     type: GET_SHELTERS,
     payload: axios("/api/shelters")
+  };
+}
+
+export function getShelter() {
+  return {
+    type: GET_SHELTER,
+    payload: axios("/api/shelters:id")
   };
 }
 export default userReducer;

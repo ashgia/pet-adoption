@@ -16,6 +16,7 @@ import {
   Row,
   Container
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./Shelters.css";
 
 class Shelters extends Component {
@@ -65,7 +66,13 @@ class Shelters extends Component {
                       />
                       <CardBody>
                         <CardText>{shelter.address}</CardText>
-                        <CardLink href="#">About Us</CardLink>
+                        {/* <CardLink href="#">About Us</CardLink> */}
+                        <Link
+                          to={`/shelters/${shelter.userid}`}
+                          className="shelter-link"
+                        >
+                          About Us
+                        </Link>
                         {/* <CardLink href="#">Contact</CardLink> */}
                       </CardBody>
                     </Card>

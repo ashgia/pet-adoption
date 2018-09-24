@@ -138,7 +138,7 @@ class ShelterProfile extends Component {
             <h1>Basic Info</h1>
 
             <div className="address">
-              city: {this.props.user.city}
+              address: {this.props.user.address}
               {this.renderInputField("address")}
               {this.renderButton(() =>
                 this.props.updateAddress(this.state.address)
