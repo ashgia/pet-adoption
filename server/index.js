@@ -14,7 +14,7 @@ const port = 3001;
 //CONTROLLERS, endpoint functions
 const user_controller = require("./controllers/user_controller");
 const { getUser, getUsers } = require("./controllers/auth_controller");
-const { getShelters, getShelter } = require("./controllers/shelter_controller");
+const { getShelters, getProfile } = require("./controllers/shelter_controller");
 
 //SERVER SETUP
 const app = express();
@@ -87,7 +87,9 @@ app.get("/api/users", getUsers);
 
 //Access shelters
 app.get("/api/shelters", getShelters);
-app.get("/api/shelter/:id", getShelter);
+
+//Access profiles
+app.get("/api/profile/:id", getProfile);
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);

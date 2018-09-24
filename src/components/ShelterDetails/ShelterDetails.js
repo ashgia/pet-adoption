@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarSide from "../NavBarSide/NavBarSide";
-import { getShelter } from "../../ducks/userReducer";
+import { getProfile } from "../../ducks/userReducer";
 
 class ShelterDetails extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class ShelterDetails extends Component {
   }
 
   async componentDidMount() {
-    await this.props.getShelter(this.props.match.params.id).then(response => {
+    await this.props.getProfile(this.props.match.params.id).then(response => {
       console.log(response);
       this.setState({ shelter: response.value.data[0] });
     });
@@ -68,6 +68,6 @@ const mapStateToProps = state => state;
 export default connect(
   mapStateToProps,
   {
-    getShelter
+    getProfile
   }
 )(ShelterDetails);

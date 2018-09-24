@@ -106,7 +106,7 @@ class Shelters extends Component {
                 <Input
                   className="search-input-box"
                   changed={e => this.filterHandler(e.target.value)}
-                  placeholder="Search Shelter"
+                  placeholder="ex. Houston"
                 />
               </div>
             </div>

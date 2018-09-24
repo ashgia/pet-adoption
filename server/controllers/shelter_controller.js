@@ -5,14 +5,15 @@ const getShelters = (req, res) => {
   });
 };
 
-const getShelter = (req, res) => {
+const getProfile = (req, res) => {
   const db = req.app.get("db");
-  db.get_shelter_id(req.params.id).then(response => {
+  db.get_profile_id(req.params.id).then(response => {
     console.log(response);
     res.status(200).send(response);
   });
 };
+
 module.exports = {
   getShelters,
-  getShelter
+  getProfile
 };
