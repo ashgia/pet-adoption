@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import firebaseinit from "../../firebaseinit";
 import FileUploader from "react-firebase-file-uploader";
+import { updatePhotoURL } from "../../ducks/userReducer";
+import { connect } from "react-redux";
 
 class UploadPic extends Component {
   state = {
@@ -9,6 +11,7 @@ class UploadPic extends Component {
     // isUploading: false,
     // progress: 0,
     avatarURL: ""
+    // photoURL:
   };
 
   handleChangeUsername = event =>
@@ -30,6 +33,8 @@ class UploadPic extends Component {
       .child(filename)
       .getDownloadURL()
       .then(url => this.setState({ avatarURL: url }));
+
+    // .then(avatarURL => this.props.updatePhotoURL(avatarURL));
   };
 
   render() {
@@ -38,7 +43,9 @@ class UploadPic extends Component {
         <form>
           <label>Image: </label>
           {this.state.isUploading && <p>{this.state.progress}</p>}
-          {this.state.avatarURL && <img src={this.state.avatarURL} />}
+          {this.state.avatarURL && (
+            <img src={this.state.avatarURL} alt="avatar" />
+          )}
           <FileUploader
             accept="image/*"
             name="avatar"
@@ -55,4 +62,9 @@ class UploadPic extends Component {
   }
 }
 
-export default UploadPic;
+const mapStatetoProps = state => state;
+
+export default connect(
+  mapStatetoProps,
+  { updatePhotoURL }
+)(UploadPic);

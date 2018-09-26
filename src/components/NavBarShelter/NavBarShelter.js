@@ -2,10 +2,18 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import "./NavBarShelter.css";
+import { getUser } from "../../ducks/userReducer";
+import { connect } from "react-redux";
 
 class NavBarShelter extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: []
+    };
+  }
+  componentDidMount() {
+    this.props.getUser();
   }
 
   render() {
@@ -43,7 +51,11 @@ class NavBarShelter extends Component {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="shelter-nav-link7" tag={Link} to="/messages">
+            <NavLink
+              className="shelter-nav-link7"
+              tag={Link}
+              to={`/chat/${this.props.user.userid}`}
+            >
               Messages
             </NavLink>
           </NavItem>
@@ -53,4 +65,11 @@ class NavBarShelter extends Component {
   }
 }
 
-export default NavBarShelter;
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  {
+    getUser
+  }
+)(NavBarShelter);

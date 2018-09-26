@@ -13,7 +13,16 @@ const getProfile = (req, res) => {
   });
 };
 
+const getSocketID = (req, res) => {
+  const db = req.app.get("db");
+  db.get_profile_id(req.params.id).then(response => {
+    console.log(response);
+    res.status(200).send(response);
+  });
+};
+
 module.exports = {
   getShelters,
-  getProfile
+  getProfile,
+  getSocketID
 };

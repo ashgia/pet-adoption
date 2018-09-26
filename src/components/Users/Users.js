@@ -9,9 +9,9 @@ import {
   CardTitle,
   CardText,
   CardDeck,
-  CardColumns,
+ 
   CardSubtitle,
-  CardLink,
+
   CardBody,
   Col,
   Row,

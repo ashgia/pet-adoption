@@ -1,9 +1,11 @@
 require("dotenv").config();
 const express = require("express");
+const app = express();
 const session = require("express-session");
 const { json } = require("body-parser");
 const massive = require("massive");
 const passport = require("passport");
+const path = require("path");
 
 //SOCKETS
 const http = require("http");
@@ -11,6 +13,8 @@ const socket = require("socket.io");
 
 const server = http.createServer(app);
 const io = (module.exports.io = socket(server));
+app.use(express.static(path.join(__dirname, "../build")));
+app.use(express.static(`${__dirname}/../build`));
 
 //SOCKET PORT
 const port = process.env.PORT || 3001;
@@ -24,15 +28,24 @@ const strategy = require("./strategy");
 //CONTROLLERS, endpoint functions
 const user_controller = require("./controllers/user_controller");
 const { getUser, getUsers } = require("./controllers/auth_controller");
-const { getShelters, getProfile } = require("./controllers/shelter_controller");
-const { getChats, addChat, addMessageToChat, addMessage }
+const {
+  getShelters,
+  getProfile,
+  getSocketID
+} = require("./controllers/shelter_controller");
+const {
+  getChats,
+  addChat,
+  addMessageToChat,
+  addMessage
+} = require("./controllers/mysocket_controller");
 const SocketManager = require("./controllers/socket_controller");
 
 //SOCKET
 io.on("connection", SocketManager);
 
 //SERVER SETUP
-const app = express();
+// const app = express();
 
 //DB CONNECTION
 massive(process.env.CONNECTION_STRING)
@@ -109,6 +122,8 @@ app.get("/api/profile/:id", getProfile);
 //sockets
 app.post("/api/user/chat", addChat);
 app.post("/api/user/chat/update", addMessageToChat);
+app.put("/api/user/chat", addMessage);
+app.get("/api/user/chat/:id", getSocketID);
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);

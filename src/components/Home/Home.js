@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Home.css";
-import { UncontrolledCarousel, NavbarBrand } from "reactstrap";
+import { UncontrolledCarousel } from "reactstrap";
 import Navbar from "../Navbar/Navbar";
 import { connect } from "react-redux";
 import { getUser } from "../../ducks/authReducer";
@@ -66,7 +66,7 @@ const Home = () => {
           <p>Tulu's Friends</p>
         </a>
       </div>
-      <div className="login">
+      <div className="login-home">
         <a href="/">
           <p>Login</p>
         </a>

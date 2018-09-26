@@ -45,6 +45,7 @@ const GET_USER = "GET_USER";
 const GET_USERS = "GET_USERS";
 const GET_SHELTERS = "GET_SHELTERS";
 const GET_PROFILE = "GET_PROFILE";
+const GET_SOCKET_ID = "GET_SOCKET_ID";
 
 function userReducer(state = initialState, action) {
   console.log(action.type, action.payload, state);
@@ -160,6 +161,12 @@ function userReducer(state = initialState, action) {
       };
 
     case GET_PROFILE:
+      return {
+        ...state,
+        user: action.payload.data
+      };
+
+    case GET_SOCKET_ID:
       return {
         ...state,
         user: action.payload.data
@@ -386,6 +393,14 @@ export function getProfile(id) {
   return {
     type: GET_PROFILE,
     payload: axios(`/api/profile/${id}`)
+  };
+}
+
+export function getSocketID(id) {
+  console.log(id);
+  return {
+    type: GET_SOCKET_ID,
+    payload: axios(`/api/user/chat/${id}`)
   };
 }
 

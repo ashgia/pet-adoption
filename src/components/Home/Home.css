@@ -50,20 +50,20 @@ body,
   text-decoration: none;
 }
 
-.login {
+.login-home {
   position: absolute;
   margin-top: 35px;
-  margin-left: 1130px;
+  margin-left: 1300px;
   font-family: "Bitter", serif;
   color: white;
   font-size: 25px;
 }
 
-.login a {
+.login-home a {
   color: white;
 }
 
-.login a:hover {
+.login-home a:hover {
   color: white;
   text-decoration: none;
 }

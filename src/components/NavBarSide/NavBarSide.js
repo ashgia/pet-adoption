@@ -4,10 +4,6 @@ import { Nav, NavItem, NavLink } from "reactstrap";
 import "./NavBarSide.css";
 
 class NavBarSide extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div id="navbar-side-id">

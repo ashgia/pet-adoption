@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import io from "socket.io-client";
 import { connect } from "react-redux";
-import { USER_CONNECTED, LOGOUT } from "./socketEvents";
+import { USER_CONNECTED, LOGOUT } from "./SocketEvents";
+import SetUser from "./setUser";
 import ChatContainer from "./chats/ChatContainer";
 import "./Chat.css";
+import { getProfile } from "../../ducks/userReducer";
 
 const socketUrl = "http://localhost:3001";
 class Chat extends Component {
@@ -19,8 +21,11 @@ class Chat extends Component {
 
   componentDidMount() {
     this.initSocket();
-    // console.log(this.props.match.params);
-    this.setState({ userName: this.props.match.params.name });
+    this.props.getProfile(this.props.match.params.id).then(response => {
+      // console.log(this.props.match.params.userid);
+      console.log(response);
+      this.setState({ userName: response.value.data.fullname });
+    });
   }
 
   /*
@@ -57,15 +62,28 @@ class Chat extends Component {
     const { socket, user } = this.state;
     return (
       <div className="container">
-        <ChatContainer
-          userName={this.state.userName}
-          socket={socket}
-          user={user}
-          logout={this.logout}
-        />
+        {!user ? (
+          <SetUser socket={socket} setUser={this.setUser} />
+        ) : (
+          //if there is a user, then we're going to put a chat container on the dom
+          //it gets a socket, a user, and a logout function
+          <ChatContainer
+            userName={this.state.userName}
+            socket={socket}
+            user={user}
+            logout={this.logout}
+          />
+        )}
       </div>
     );
   }
 }
 
-export default connect(state => state)(Chat);
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  {
+    getProfile
+  }
+)(Chat);

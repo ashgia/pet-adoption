@@ -7,11 +7,13 @@ import {
   MESSAGE_RECIEVED,
   TYPING,
   PRIVATE_MESSAGE
-} from "../socketEvents";
+} from "../SocketEvents";
 import ChatHeading from "./ChatHeading";
+import { getProfile } from "../../ducks/userReducer";
 import Messages from "../messages/Messages";
 import MessageInput from "../messages/MessageInput";
 import "../Chat.css";
+
 import { connect } from "react-redux";
 
 class ChatContainer extends Component {
@@ -20,13 +22,24 @@ class ChatContainer extends Component {
 
     this.state = {
       chats: [],
-      userName: this.props.userName,
+      user: {},
+      userName: this.props.user.fullname,
       activeChat: null
     };
   }
 
+  //HAVING ISSUE GETTING ID
   componentDidMount() {
-    this.initSocket(this.props.socket);
+    this.props.getProfile(this.props.match.param.id).then(response => {
+      this.setState({ user: response.value.data[0] });
+    });
+    const { socket } = this.props;
+
+    console.log(this.props);
+    // const { name } = this.props.match.params;
+    //initiales everything that we need for our sockets
+
+    this.initSocket(socket);
   }
 
   initSocket(socket) {
@@ -39,14 +52,14 @@ class ChatContainer extends Component {
       socket.emit(COMMUNITY_CHAT, this.resetChat);
     });
     //sender is us, reciever is rando
-    socket.emit(PRIVATE_MESSAGE, { reciever: "mike", sender: user.name });
+    socket.emit(PRIVATE_MESSAGE, { reciever: "mike", sender: user.fullname });
   }
 
   sendOpenPrivateMessage = reciever => {
     const { socket, user } = this.props;
     //getting socket from props
     //sender is US
-    socket.emit(PRIVATE_MESSAGE, { reciever, sender: user.name });
+    socket.emit(PRIVATE_MESSAGE, { reciever, sender: user.fullname });
   };
   resetChat = chat => {
     return this.addChat(chat, true);
@@ -103,7 +116,7 @@ class ChatContainer extends Component {
   };
   updateTypingInChat = chatId => {
     return ({ isTyping, user }) => {
-      if (user !== this.props.user.name) {
+      if (user !== this.props.user.fullname) {
         const { chats } = this.state;
 
         let newChats = chats.map(chat => {
@@ -126,7 +139,7 @@ class ChatContainer extends Component {
       .put("/api/user/chat", {
         chatId,
         message,
-        sender: this.props.user.name
+        sender: this.props.user.fullname
       })
       .then(newMessages => console.log(newMessages.data));
     socket.emit(MESSAGE_SENT, { chatId, message });
@@ -186,4 +199,11 @@ and the input to send a new message*/}
   }
 }
 
-export default connect(state => state)(ChatContainer);
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  {
+    getProfile
+  }
+)(ChatContainer);

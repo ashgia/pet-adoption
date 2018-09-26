@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Geosuggest from "react-geosuggest";
+// import Geosuggest from "react-geosuggest";
 import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
 import { connect } from "react-redux";
 import { updateCity } from "../../ducks/userReducer";
