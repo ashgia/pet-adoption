@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import { Nav, NavItem, NavLink } from "reactstrap";
 import "./NavBarShelter.css";
 
 class NavBarShelter extends Component {
@@ -48,6 +40,11 @@ class NavBarShelter extends Component {
           <NavItem>
             <NavLink className="shelter-nav-link6" tag={Link} to="/donate">
               Donate
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink className="shelter-nav-link7" tag={Link} to="/messages">
+              Messages
             </NavLink>
           </NavItem>
         </Nav>

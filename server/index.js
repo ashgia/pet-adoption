@@ -5,16 +5,31 @@ const { json } = require("body-parser");
 const massive = require("massive");
 const passport = require("passport");
 
+//SOCKETS
+const http = require("http");
+const socket = require("socket.io");
+
+const server = http.createServer(app);
+const io = (module.exports.io = socket(server));
+
+//SOCKET PORT
+const port = process.env.PORT || 3001;
+
 // AUTH0 Login Setup
 const strategy = require("./strategy");
 
 //PORT
-const port = 3001;
+// const port = 3001;
 
 //CONTROLLERS, endpoint functions
 const user_controller = require("./controllers/user_controller");
 const { getUser, getUsers } = require("./controllers/auth_controller");
 const { getShelters, getProfile } = require("./controllers/shelter_controller");
+const { getChats, addChat, addMessageToChat, addMessage }
+const SocketManager = require("./controllers/socket_controller");
+
+//SOCKET
+io.on("connection", SocketManager);
 
 //SERVER SETUP
 const app = express();
@@ -69,9 +84,6 @@ passport.deserializeUser((user, done) => {
 //     .catch(err => res.status(500).send(err));
 // });
 
-//ENDPOINTS ENDPOINTS ENDPOINTS ENDPOINTS
-app.post("/api/user", user_controller.createUser);
-
 // Login, redirect to frontend on success or failure
 app.get(
   "/newAdoptLogin",
@@ -85,11 +97,18 @@ app.get(
 app.get("/api/user", getUser);
 app.get("/api/users", getUsers);
 
+//ENDPOINTS ENDPOINTS ENDPOINTS ENDPOINTS
+app.post("/api/user", user_controller.createUser);
+
 //Access shelters
 app.get("/api/shelters", getShelters);
 
 //Access profiles
 app.get("/api/profile/:id", getProfile);
+
+//sockets
+app.post("/api/user/chat", addChat);
+app.post("/api/user/chat/update", addMessageToChat);
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);

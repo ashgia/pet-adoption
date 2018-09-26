@@ -18,6 +18,7 @@ import Users from "./components/Users/Users";
 import UploadPic from "./components/UploadPic/UploadPic";
 import ShelterDetails from "./components/ShelterDetails/ShelterDetails";
 import UserShelterProfile from "./components/UserShelterProfile/UserShelterProfile";
+import Chat from "./components/Chat/Chat";
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
@@ -37,5 +38,6 @@ export default (
     <Route path="/uploadpic" component={UploadPic} />
     <Route path="/shelter/:id" component={ShelterDetails} />
     <Route path="/usershelter/:id" component={UserShelterProfile} />
+    <Route path="/chat/:name" component={Chat} />
   </Switch>
 );
