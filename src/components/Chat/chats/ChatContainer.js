@@ -9,7 +9,7 @@ import {
   PRIVATE_MESSAGE
 } from "../SocketEvents";
 import ChatHeading from "./ChatHeading";
-import { getProfile } from "../../ducks/userReducer";
+import { getProfile } from "../../../ducks/userReducer";
 import Messages from "../messages/Messages";
 import MessageInput from "../messages/MessageInput";
 import "../Chat.css";

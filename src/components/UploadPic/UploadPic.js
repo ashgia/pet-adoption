@@ -32,9 +32,8 @@ class UploadPic extends Component {
       .ref("images")
       .child(filename)
       .getDownloadURL()
-      .then(url => this.setState({ avatarURL: url }));
-
-    // .then(avatarURL => this.props.updatePhotoURL(avatarURL));
+      .then(url => this.setState({ avatarURL: url }))
+      .then(() => this.props.updatePhotoURL(this.state.avatarURL));
   };
 
   render() {

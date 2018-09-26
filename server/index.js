@@ -68,7 +68,6 @@ passport.use(strategy);
 
 // What properties do we want our user to have on session?
 passport.serializeUser((user, done) => {
-  console.log(user);
   const db = app.get("db");
   db.get_user(user.id)
     .then(response => {

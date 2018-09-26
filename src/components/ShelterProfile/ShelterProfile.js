@@ -125,7 +125,7 @@ class ShelterProfile extends Component {
                   )}
                 </div>
                 <div className="user-pic">
-                  photo: {this.props.user.photoURL}
+                  photo: <img src={this.props.user.photoURL} />
                   {this.renderInputField("photoURL")}
                   {this.renderButton(() =>
                     this.props.updatePhotoURL(this.state.photoURL)

@@ -89,6 +89,7 @@ class UserProfile extends Component {
   }
   componentDidMount() {
     this.props.getUser();
+    console.log(this.props);
   }
   render() {
     return (

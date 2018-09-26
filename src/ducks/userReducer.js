@@ -142,7 +142,7 @@ function userReducer(state = initialState, action) {
         shelter: action.payload
       };
 
-    case GET_USER:
+    case `${GET_USER}_FULFILLED`:
       return {
         ...state,
         user: action.payload.data

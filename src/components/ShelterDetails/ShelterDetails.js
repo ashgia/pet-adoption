@@ -19,6 +19,7 @@ class ShelterDetails extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="body-profile-page">
         <div className="navbar">
