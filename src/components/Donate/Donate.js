@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBarSide from "../NavBarSide/NavBarSide";
 import "./Donate.css";
+import TakeMoney from "./TakeMoney";
 
 class Donate extends Component {
   render() {
@@ -22,6 +23,9 @@ class Donate extends Component {
                 shadow, darkness in deap ocean an, Motionless Wabash pigtoe Full
                 moon. Spot hogfish banded grunt, mystery snail happy flounder.
               </p>
+              <div className="donate-button">
+                <TakeMoney />
+              </div>
             </div>
           </div>
           <div className="donate2-section">
@@ -76,11 +80,11 @@ class Donate extends Component {
           </div>
         </div>
         <div>
-          <footer className="footer">
+          {/* <footer className="footer">
             <div className="footer-container">
               <span className="text-muted">footer content here.</span>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
     );

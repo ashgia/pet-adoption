@@ -92,9 +92,9 @@ module.exports = function(socket) {
     sendMessageToChatFromUser(chatId, message);
   });
 
-  socket.on(TYPING, ({ chatId, isTyping }) => {
-    sendTypingFromUser(chatId, isTyping);
-  });
+  // socket.on(TYPING, ({ chatId, isTyping }) => {
+  //   sendTypingFromUser(chatId, isTyping);
+  // });
 
   //Private message event
   //so we know who is sending and recieving the message

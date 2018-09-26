@@ -6,6 +6,8 @@ const { json } = require("body-parser");
 const massive = require("massive");
 const passport = require("passport");
 const path = require("path");
+const cors = require("cors");
+app.use(cors());
 
 //SOCKETS
 const http = require("http");
@@ -124,6 +126,6 @@ app.post("/api/user/chat/update", addMessageToChat);
 app.put("/api/user/chat", addMessage);
 app.get("/api/user/chat/:id", getSocketID);
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });

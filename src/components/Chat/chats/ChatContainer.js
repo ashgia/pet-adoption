@@ -30,9 +30,9 @@ class ChatContainer extends Component {
 
   //HAVING ISSUE GETTING ID
   componentDidMount() {
-    this.props.getProfile(this.props.match.param.id).then(response => {
-      this.setState({ user: response.value.data[0] });
-    });
+    // this.props.getProfile(this.props.match.param.id).then(response => {
+    //   this.setState({ user: response.value.data[0] });
+    // });
     const { socket } = this.props;
 
     console.log(this.props);
@@ -67,7 +67,7 @@ class ChatContainer extends Component {
   addChat = (chat, reset = false) => {
     const { socket } = this.props;
     const { chats } = this.state;
-    const { id } = this.props.user.id;
+    const { id } = this.props.user;
 
     const newChats = reset ? [chat] : [...chats, chat];
 
@@ -79,7 +79,7 @@ class ChatContainer extends Component {
     ///REQUEST
     axios
       .post("/api/user/chat", {
-        id: this.props.user.id,
+        id: id,
         chats: newChats
       })
       .then(response => {
@@ -173,7 +173,7 @@ class ChatContainer extends Component {
 and the input to send a new message*/}
           {activeChat !== null ? (
             <div className="chat-room">
-              <ChatHeading name="Ashley Nguyen" />
+              <ChatHeading name={`${this.props.userName}`} />
               <Messages
                 messages={activeChat.messages}
                 user={user}

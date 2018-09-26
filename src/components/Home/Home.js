@@ -58,6 +58,10 @@ const items = [
   }
 ];
 
+// document.getElementById("idofitemhover").onmouseover = function () {
+//   document.getElementById('idofbackground').style.backgroundImage = "url('image.png') no-repeat";
+//        };
+
 const Home = () => {
   return (
     <div className="bannerContainer">

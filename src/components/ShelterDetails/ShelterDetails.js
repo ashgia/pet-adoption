@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarSide from "../NavBarSide/NavBarSide";
 import { getProfile } from "../../ducks/userReducer";
+import { Link } from "react-router-dom";
 
 class ShelterDetails extends Component {
   constructor(props) {
@@ -58,6 +59,13 @@ class ShelterDetails extends Component {
             </div>
             <div className="email">email: {this.state.shelter.email}</div>
           </div>
+          <Link
+            to={`/chat/${this.props.user.user.userid || 1}/${
+              this.state.shelter.userid
+            }`}
+          >
+            Chat With Us
+          </Link>
         </div>
       </div>
     );

@@ -38,6 +38,6 @@ export default (
     <Route path="/uploadpic" component={UploadPic} />
     <Route path="/shelter/:id" component={ShelterDetails} />
     <Route path="/usershelter/:id" component={UserShelterProfile} />
-    <Route path="/chat/:name" component={Chat} />
+    <Route path="/chat/:user/:shelter" component={Chat} />
   </Switch>
 );

@@ -13,26 +13,28 @@ class NavBarSide extends Component {
               Tulu's Friends
             </NavLink>
           </NavItem>
-          <NavItem>
-            <NavLink className="side-nav-link2" tag={Link} to="/howitworks">
-              How It Works
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink className="side-nav-link3" tag={Link} to="/shelters">
-              Shelters
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink className="side-nav-link4" tag={Link} to="/volunteer">
-              Volunteer
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink className="side-nav-link5" tag={Link} to="/donate">
-              Donate
-            </NavLink>
-          </NavItem>
+          <div className="side-nav-link-right">
+            <NavItem>
+              <NavLink className="side-nav-link2" tag={Link} to="/howitworks">
+                How It Works
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="side-nav-link3" tag={Link} to="/shelters">
+                Shelters
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="side-nav-link4" tag={Link} to="/volunteer">
+                Volunteer
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="side-nav-link5" tag={Link} to="/donate">
+                Donate
+              </NavLink>
+            </NavItem>
+          </div>
         </Nav>
       </div>
     );

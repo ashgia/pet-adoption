@@ -21,10 +21,10 @@ class Chat extends Component {
 
   componentDidMount() {
     this.initSocket();
-    this.props.getProfile(this.props.match.params.id).then(response => {
+    this.props.getProfile(this.props.match.params.shelter).then(response => {
       // console.log(this.props.match.params.userid);
       console.log(response);
-      this.setState({ userName: response.value.data.fullname });
+      this.setState({ userName: response.value.data[0].fullname });
     });
   }
 
@@ -44,8 +44,8 @@ class Chat extends Component {
     const { socket } = this.state;
 
     let user = {
-      id: this.props.user.authID,
-      name: this.props.user.fullname
+      id: this.props.match.params.user,
+      name: this.props.user.fullname || "Ashley"
     };
 
     socket.emit(USER_CONNECTED, user);
