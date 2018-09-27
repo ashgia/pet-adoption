@@ -7,7 +7,7 @@ import ChatContainer from "./chats/ChatContainer";
 import "./Chat.css";
 import { getProfile } from "../../ducks/userReducer";
 
-const socketUrl = "http://localhost:3001";
+const socketUrl = process.env.REACT_APP_SERVER;
 class Chat extends Component {
   constructor(props) {
     super(props);
