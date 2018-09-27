@@ -17,7 +17,7 @@ const {
   createUser,
   createMessage,
   createChat
-} = require("../../src/components/Chat/SocketFactories");
+} = require("../../src/components/Chat/socketFactories");
 
 //has to be let because we're changing it
 let connectedUsers = {};
