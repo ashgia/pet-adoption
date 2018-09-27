@@ -1,13 +1,16 @@
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const app = express();
 const session = require("express-session");
 const { json } = require("body-parser");
 const massive = require("massive");
 const passport = require("passport");
-const path = require("path");
+
 const cors = require("cors");
 app.use(cors());
+
+//HOSTING
 
 //SOCKETS
 const http = require("http");
@@ -102,8 +105,8 @@ passport.deserializeUser((user, done) => {
 app.get(
   "/newAdoptLogin",
   passport.authenticate("auth0", {
-    successRedirect: "http://localhost:3000/#/WizardOneRegistration",
-    failureRedirect: "http://localhost:3001/"
+    successRedirect: process.env.SUCCESS_REDIRECT,
+    failureRedirect: process.env.FAILURE_REDIRECT
   })
 );
 

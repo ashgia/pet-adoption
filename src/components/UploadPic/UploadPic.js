@@ -54,6 +54,7 @@ class UploadPic extends Component {
             onUploadError={this.handleUploadError}
             onUploadSuccess={this.handleUploadSuccess}
             onProgress={this.handleProgress}
+            multiple={"multiple"}
           />
         </form>
       </div>

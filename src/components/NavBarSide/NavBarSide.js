@@ -1,9 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Nav, NavItem, NavLink } from "reactstrap";
+import { getUser } from "../../ducks/userReducer";
+
+import { connect } from "react-redux";
 import "./NavBarSide.css";
 
 class NavBarSide extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: []
+    };
+  }
+  componentDidMount() {
+    this.props.getUser();
+  }
   render() {
     return (
       <div id="navbar-side-id">
@@ -33,6 +45,20 @@ class NavBarSide extends Component {
               <NavLink className="side-nav-link5" tag={Link} to="/donate">
                 Donate
               </NavLink>
+              {/* <NavLink
+                className="shelter-nav-link6"
+                tag={Link}
+                to={`/chat/${this.props.user.userid}`}
+              >
+                Messages
+              </NavLink> */}
+              {/* <Link
+                to={`/chat/${this.props.user.user.userid || 1}/${
+                  this.state.shelter.userid
+                }`}
+              >
+                Chat With Us
+              </Link> */}
             </NavItem>
           </div>
         </Nav>
@@ -40,5 +66,11 @@ class NavBarSide extends Component {
     );
   }
 }
+const mapStateToProps = state => state;
 
-export default NavBarSide;
+export default connect(
+  mapStateToProps,
+  {
+    getUser
+  }
+)(NavBarSide);

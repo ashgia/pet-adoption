@@ -8,10 +8,10 @@ class TakeMoney extends Component {
     fetch("/save-stripe-token", {
       method: "POST",
       body: JSON.stringify(token)
-    }).then(response => {
-      response.json().then(data => {
-        alert(`We are in business, ${data.email}`);
-      });
+      // }).then(response => {
+      //   response.json().then(data => {
+      //     alert(`We are in business, ${data.email}`);
+      //   });
     });
   };
 
@@ -21,7 +21,12 @@ class TakeMoney extends Component {
         token={this.onToken}
         stripeKey="pk_test_wpTGYfkOhU8Nv7gFXsliCVW8"
         name="Tulu's Friends"
-      />
+        description="Thank you for your generosity."
+        currency="USD"
+        amount={1000}
+      >
+        <button className="btn-donate">Donate</button>
+      </StripeCheckout>
     );
   }
 }

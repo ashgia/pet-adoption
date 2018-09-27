@@ -51,13 +51,13 @@ class NavBarShelter extends Component {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
+            {/* <NavLink
               className="shelter-nav-link7"
               tag={Link}
               to={`/chat/${this.props.user.userid}`}
             >
               Messages
-            </NavLink>
+            </NavLink> */}
           </NavItem>
         </Nav>
       </div>

@@ -79,7 +79,8 @@ const Home = () => {
         <Navbar />
       </div>
       <div className="getStartedButton">
-        <a href="http://localhost:3001/newAdoptLogin">
+        <a href={process.env.REACT_APP_LOGIN}>
+          {/* <a href="http://localhost:3001/newAdoptLogin"> */}
           <button>Start</button>
         </a>
       </div>
