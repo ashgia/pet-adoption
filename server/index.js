@@ -38,8 +38,9 @@ const {
   getProfile,
   getSocketID
 } = require("./controllers/shelter_controller");
+const { addPet } = require("./controllers/pet_controller");
 const {
-  getChats,
+  // getChats,
   addChat,
   addMessageToChat,
   addMessage
@@ -122,6 +123,9 @@ app.get("/api/shelters", getShelters);
 
 //Access profiles
 app.get("/api/profile/:id", getProfile);
+
+//Access pets
+app.post("/api/user/pets", addPet);
 
 //sockets
 app.post("/api/user/chat", addChat);

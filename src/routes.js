@@ -19,6 +19,7 @@ import UploadPic from "./components/UploadPic/UploadPic";
 import ShelterDetails from "./components/ShelterDetails/ShelterDetails";
 import UserShelterProfile from "./components/UserShelterProfile/UserShelterProfile";
 import Chat from "./components/Chat/Chat";
+import AddPets from "./components/AddPets/AddPets";
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
@@ -33,6 +34,7 @@ export default (
     <Route path="/userProfile" component={UserProfile} />
     <Route path="/wizardTwoShelter" component={WizardTwoShelter} />
     <Route path="/wizardThreeShelter" component={WizardThreeShelter} />
+    <Route path="/addPets" component={AddPets} />
     <Route path="/shelterProfile" component={ShelterProfile} />
     <Route path="/users" component={Users} />
     <Route path="/uploadpic" component={UploadPic} />

@@ -31,7 +31,6 @@ class WizardThreeShelter extends Component {
     this.props.getUser();
   }
 
-  
   render() {
     return (
       <div className="wizthreeshelter-body">

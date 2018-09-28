@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarShelter from "../NavBarShelter/NavBarShelter";
+import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
+
 import {
   getUser,
   updateAboutMe,
@@ -13,6 +16,7 @@ import {
   updateMission,
   updatePolicy
 } from "../../ducks/userReducer";
+// import { getPets } from "../../ducks/petReducer";
 
 class ShelterProfile extends Component {
   constructor(props) {
@@ -27,7 +31,8 @@ class ShelterProfile extends Component {
       aboutMe: "",
       city: "",
       mission: "",
-      policy: ""
+      policy: "",
+      pets: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSave = this.handleSave.bind(this);
@@ -77,8 +82,24 @@ class ShelterProfile extends Component {
   }
   componentDidMount() {
     this.props.getUser();
+    // this.props.getPets().then(response => {
+    //   this.setState({ pets: response.value.data });
+    // });
   }
   render() {
+    // console.log(this.props);
+    // let petsDisplay = this.state.pets.map(pets => {
+    //   return (
+    //     <div className="pets-container">
+    //       <div className="petcard">{petsDisplay}</div>
+    //       <div className="addpets-button">
+    //         <Link to="/addPets">
+    //           <Button> Add Pets </Button>
+    //         </Link>
+    //       </div>
+    //     </div>
+    //   );
+    // });
     return (
       <div className="body-profile-page">
         <div className="navbar">
@@ -158,6 +179,9 @@ class ShelterProfile extends Component {
                 this.props.updateEmail(this.state.email)
               )}
             </div>
+            <Link to="/addpets">
+              <Button>Add Pets</Button>
+            </Link>
           </div>
         </div>
       </div>

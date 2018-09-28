@@ -9,7 +9,7 @@ class Navbar extends Component {
       <div id="navbarmain">
         <Nav vertical id="navbar">
           <NavItem>
-            <NavLink id="nav-link1" tag={Link} to="/">
+            <NavLink id="nav-link1" tag={Link} to="/shelterProfile">
               Home
             </NavLink>
           </NavItem>
