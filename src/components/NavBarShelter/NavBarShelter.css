@@ -1,6 +1,7 @@
 .navbar-shelter {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   margin-top: 20px;
   padding-bottom: 30px;
@@ -8,7 +9,7 @@
 .shelter-nav-link1 {
   color: black;
   height: 30px;
-  width: 600px;
+  width: 100%;
   text-align: left;
   font-size: 20px;
   font-family: "Bitter", serif;
@@ -16,6 +17,13 @@
 }
 .shelter-nav-link1:hover {
   color: white;
+}
+.shelter-nav-link-right li {
+  display: inline-block;
+}
+.shelter-nav-link-right {
+  position: absolute;
+  right: 70px;
 }
 
 .shelter-nav-link2 {

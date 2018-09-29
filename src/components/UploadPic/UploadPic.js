@@ -3,6 +3,7 @@ import firebaseinit from "../../firebaseinit";
 import FileUploader from "react-firebase-file-uploader";
 import { updatePhotoURL } from "../../ducks/userReducer";
 import { connect } from "react-redux";
+import "./UploadPic.css";
 
 class UploadPic extends Component {
   state = {
@@ -41,10 +42,16 @@ class UploadPic extends Component {
       <div>
         <form>
           <label>Image: </label>
+
           {this.state.isUploading && <p>{this.state.progress}</p>}
           {this.state.avatarURL && (
-            <img src={this.state.avatarURL} alt="avatar" />
+            <div className="firebase-imgbox">
+              <div className="img-box">
+                <img src={this.state.avatarURL} alt="avatar" />
+              </div>
+            </div>
           )}
+
           <FileUploader
             accept="image/*"
             name="avatar"

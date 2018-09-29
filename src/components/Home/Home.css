@@ -110,3 +110,7 @@ body,
   border: white;
   color: black;
 }
+
+.getStartedButton button:focus {
+  outline: 0;
+}

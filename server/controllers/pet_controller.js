@@ -31,5 +31,11 @@ module.exports = {
         res.status(500).send("Error");
         console.log(err);
       });
+  },
+  getPets: (req, res) => {
+    const db = req.app.get("db");
+    db.get_pets().then(response => {
+      res.status(200).send(response);
+    });
   }
 };

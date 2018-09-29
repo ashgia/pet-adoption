@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavBarShelter from "../NavBarShelter/NavBarShelter";
 import UploadPic from "../UploadPic/UploadPic";
 import {
+  Card,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardSubtitle,
+  CardBody,
   Col,
-  Button,
   Form,
   FormGroup,
   Label,
   Input,
-  FormText
+  FormText,
+  Button
 } from "reactstrap";
 import { connect } from "react-redux";
 import "./AddPets.css";
@@ -37,9 +43,14 @@ class AddPets extends Component {
     let petArray = this.state.pets;
     petArray.push({
       petphotoURL: this.props.user.photoURL,
-      species: this.state.petspecies,
-      breed: this.state.petbreed,
-      petname: this.state.petname
+      petspecies: this.state.petspecies,
+      petbreed: this.state.petbreed,
+      petname: this.state.petname,
+      petgender: this.state.petgender,
+      petsize: this.state.petsize,
+      petcolor: this.state.petcolor,
+      petage: this.state.age,
+      petgoodWith: this.state.petgoodWith
     });
     this.setState({ pets: petArray });
     axios.post("/api/user/pets", {
@@ -74,10 +85,47 @@ class AddPets extends Component {
     this.state.pets.length > 0
       ? (petsDisplay = this.state.pets.map(pet => {
           return (
-            <div>
-              <img src={pet.petphotoURL} />
-              {pet.petname}
-            </div>
+            // <div>
+            //   <img src={pet.petphotoURL} />
+            //   {pet.petname}
+            // </div>
+            <Col sm="3">
+              <div className="petcarddeck">
+                <CardDeck>
+                  <div className="petcarddeck-single">
+                    <Card>
+                      <CardBody>
+                        <CardTitle>
+                          <div className="petname">{pet.petname}</div>
+                        </CardTitle>
+                        <CardSubtitle>
+                          <div className="petspecies">{pet.petspecies}</div>
+                        </CardSubtitle>
+                      </CardBody>
+                      <img
+                        width="100%"
+                        src={pet.petphotoURL}
+                        alt="Card image cap"
+                      />
+                      <CardBody>
+                        <CardText>{pet.petbreed}</CardText>
+                        <CardText>{pet.petgender}</CardText>
+                        <CardText>{pet.petage}</CardText>
+                        <CardText>{pet.petsize}</CardText>
+                        <CardText>{pet.petcolor}</CardText>
+
+                        {/* <Link
+                          to={`/shelter/${shelter.userid}`}
+                          className="shelter-link"
+                        >
+                          About Me
+                        </Link> */}
+                      </CardBody>
+                    </Card>
+                  </div>
+                </CardDeck>
+              </div>
+            </Col>
           );
         }))
       : (petsDisplay = null);
@@ -258,9 +306,13 @@ class AddPets extends Component {
                       this.addPet();
                     }}
                   >
-                    Add
+                    Add Pet
                   </Button>
-                  {/* </Link> */}
+                  <div className="complete-button">
+                    <Link to="/shelterProfile">
+                      <Button>Complete</Button>
+                    </Link>
+                  </div>
                 </div>
               </Form>
               <div>{petsDisplay}</div>

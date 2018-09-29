@@ -39,6 +39,10 @@
 .side-nav-link-right li {
   display: inline-block;
 }
+.side-nav-link-right {
+  position: absolute;
+  right: 70px;
+}
 
 .side-nav-link2 {
   color: black;
