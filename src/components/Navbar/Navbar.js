@@ -8,11 +8,11 @@ class Navbar extends Component {
     return (
       <div id="navbarmain">
         <Nav vertical id="navbar">
-          <NavItem>
+          {/* <NavItem>
             <NavLink id="nav-link1" tag={Link} to="/shelterProfile">
               Home
             </NavLink>
-          </NavItem>
+          </NavItem> */}
           <NavItem>
             <NavLink id="nav-link2" tag={Link} to="/howitworks">
               How It Works

@@ -16,11 +16,13 @@ class HowItWorks extends Component {
             </div>
             <div className="howitworks-info">
               <p>
-                Wobbegong shark peaclam swimming. Peppered moray clownfish
-                hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                soldierfish banded sole jump. Yellow pseudochromis weasel shark
-                shadow, darkness in deap ocean an, Motionless Wabash pigtoe Full
-                moon. Spot hogfish banded grunt, mystery snail happy flounder.
+                From the comfort of their personal computers, pet lovers can
+                directly match with animal shelters in their local area. Pet
+                owners are able to browse the local pets They can then reference
+                a shelter’s web page and discover what services it offers.
+                Tulu's Friends also includes discussion forums, a pet-care
+                resource directory and a library of free pet-care articles to
+                help keep pets in their homes.
               </p>
             </div>
           </div>

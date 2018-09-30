@@ -26,7 +26,7 @@ let communityChat = createChat();
 
 module.exports = function(socket) {
   // console.log('\x1bc'); //clears console
-  console.log("Socket Id:" + socket.id);
+  // console.log("Socket Id:" + socket.id);
 
   let sendMessageToChatFromUser;
 
@@ -63,7 +63,7 @@ module.exports = function(socket) {
     //broadcast to all the users connected, updates the list
     io.emit(USER_CONNECTED, connectedUsers);
 
-    console.log(connectedUsers);
+    // console.log(connectedUsers);
   });
 
   //User disconnects
@@ -99,7 +99,7 @@ module.exports = function(socket) {
   //Private message event
   //so we know who is sending and recieving the message
   socket.on(PRIVATE_MESSAGE, ({ reciever, sender }) => {
-    console.log(reciever, sender, connectedUsers);
+    // console.log(reciever, sender, connectedUsers);
     //if the reciever is in our list of users(object that they get added onto)
     if (reciever in connectedUsers) {
       //then we make a new chat, including a name for the chat and the users

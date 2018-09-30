@@ -1,14 +1,14 @@
 const getUser = (req, res) => {
-  console.log("GET USER", req.session);
+  // console.log("GET USER", req.session);
   if (!req.user) res.sendStatus(401);
   else res.status(200).send(req.user);
 };
 
 const getUsers = (req, res) => {
-  console.log(req);
+  // console.log(req);
   const db = req.app.get("db");
   db.get_users().then(response => {
-    console.log(response);
+    // console.log(response);
     res.status(200).send(response);
   });
 };

@@ -23,7 +23,7 @@ module.exports = {
   addMessageToChat: (req, res) => {
     const { id } = req.body;
     const newMessages = req.body.chatArray[0].messages;
-    console.log("messages ------ ", newMessages);
+    // console.log("messages ------ ", newMessages);
 
     Chat.findById(id, (err, chat) => {
       chat.set({ "chats.0.messages": newMessages });

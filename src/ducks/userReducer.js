@@ -48,7 +48,7 @@ const GET_PROFILE = "GET_PROFILE";
 const GET_SOCKET_ID = "GET_SOCKET_ID";
 
 function userReducer(state = initialState, action) {
-  console.log(action.type, action.payload, state);
+  // console.log(action.type, action.payload, state);
   switch (action.type) {
     case UPDATE_NAME:
       return {
