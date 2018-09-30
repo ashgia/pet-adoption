@@ -16,6 +16,7 @@ import {
   Row,
   Container
 } from "reactstrap";
+import "./ShelterDetails.css";
 
 class ShelterDetails extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class ShelterDetails extends Component {
 
   render() {
     // console.log(this.props);
+    console.log(this.state);
     // console.log("PETS:", this.state.pets);
     let petsDisplay = [];
     this.state.pets.length > 0
@@ -84,54 +86,84 @@ class ShelterDetails extends Component {
         }))
       : (petsDisplay = null);
     return (
-      <div className="body-profile-page">
+      <div className="shelterdetails-body">
         <div className="navbar">
           <NavBarSide />
         </div>
-        <div>
-          <h1>Shelter Profile</h1>
-          <div className="profile-introduction">
-            <div className="profile-introduction-background">
-              <div clasName="introduction-inner">
-                <div className="user-name">
-                  name: {this.state.shelter.fullname}
+        <div className="shelterdetails-mainbox">
+          <div className="shelterdetails-mainbox-left">
+            <div className="user-pic-box-shelterdetails">
+              <div className="user-pic-shelterdetails">
+                <img id="shelterdetailspic" src={this.state.shelter.photourl} />
+              </div>
+            </div>
+            <div className="profile-bottom-left">
+              <div className="profile-bottom-left-right">
+                <div className="info-title">
+                  <p>Information</p>
                 </div>
-                <div className="city">city: {this.state.shelter.city}</div>
-                <div className="aboutme">
-                  about me: {this.state.shelter.aboutMe}
+                <div id="info" className="address">
+                  {" "}
+                  {this.state.shelter.address}
                 </div>
-                <div className="mission">
-                  mission: {this.state.shelter.mission}
+                <div id="info" className="phonenumber">
+                  {this.state.shelter.phone}
                 </div>
-                <div className="policy">
-                  policy: {this.state.shelter.policy}
+                <div id="info" className="email">
+                  {" "}
+                  {this.state.shelter.email}
                 </div>
-                <div className="user-pic">
-                  photo: {this.state.shelter.photoURL}
+                <div className="Chat-Link">
+                  <Link
+                    to={`/chat/${this.props.user.user.userid || 1}/${
+                      this.state.shelter.userid
+                    }`}
+                  >
+                    <Button>Chat With Us</Button>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="shelter-mainbox">
-            <h1>Basic Info</h1>
-
-            <div className="address">address: {this.state.shelter.address}</div>
-            <div className="phonenumber">
-              phone Number: {this.state.shelter.phoneNumber}
+          <div className="shelterdetailsmainbox-right">
+            <div className="profile-right">
+              <div className="profile-top-top">
+                <div className="city-shelterdetails">
+                  {this.state.shelter.city}
+                </div>
+                <div className="user-name-shelterdetails">
+                  {this.state.shelter.fullname}
+                </div>
+              </div>
+              <div className="profile-top">
+                <div className="aboutme-title">
+                  <p>About Us</p>
+                </div>
+                <div className="aboutme-shelterdetails">
+                  {this.state.shelter.aboutme}
+                </div>
+              </div>
+              <div className="profile-middle">
+                <div className="mission-title">
+                  <p>Our Mission</p>
+                </div>
+                <div className="mission">{this.state.shelter.mission}</div>
+              </div>
+              <div className="profile-bottom">
+                <div className="policy-title">
+                  <p>Our Policy</p>
+                </div>
+                <div className="policy">{this.state.shelter.policy}</div>
+              </div>
             </div>
-            <div className="email">email: {this.state.shelter.email}</div>
           </div>
-          <Link
-            to={`/chat/${this.props.user.user.userid || 1}/${
-              this.state.shelter.userid
-            }`}
-          >
-            Chat With Us
-          </Link>
         </div>
-        <Container fluid>
-          <Row>{petsDisplay}</Row>
-        </Container>
+
+        <div className="adoptable-pets-box-shelterdetails">
+          <Container fluid>
+            <Row>{petsDisplay}</Row>
+          </Container>
+        </div>
       </div>
     );
   }

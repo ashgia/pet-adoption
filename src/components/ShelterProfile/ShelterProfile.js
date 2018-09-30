@@ -9,7 +9,9 @@ import {
   CardSubtitle,
   CardBody,
   Col,
-  Button
+  Button,
+  Container,
+  Row
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -161,7 +163,7 @@ class ShelterProfile extends Component {
         <div className="shelterprofile-mainbox">
           <div className="shelterprofile-mainbox-left">
             <div className="user-pic-box">
-              <div className="user-pic">
+              <div className="user-pic-shelterprofile">
                 <img src={this.props.user.photoURL} />
                 {this.renderInputField("photoURL")}
                 {this.renderButton(() =>
@@ -205,25 +207,25 @@ class ShelterProfile extends Component {
             {/* <div className="profile-info"> */}
             <div className="profile-right">
               <div className="profile-top-top">
-                <div className="user-name">
+                <div className="user-name-shelterprofile">
                   {this.props.user.fullname}
                   {this.renderInputField("fullname")}
                   {this.renderButton(() =>
                     this.props.updateName(this.state.fullname)
                   )}
                 </div>
-                <div className="city">
+                <div className="cityprofile">
                   {this.props.user.city}
                   {this.renderInputField("city")}
                   {this.renderButton(() =>
                     this.props.updateCity(this.state.city)
                   )}
                 </div>
-                <div className="aboutme">
+                <div className="profile-top">
                   <div className="aboutme-title">
                     <p>About Us</p>
                   </div>
-                  <div className="aboutme-text">
+                  <div className="aboutme-shelterprofile">
                     {this.props.user.aboutMe}
                     {this.renderInputField("aboutMe")}
                     {this.renderButton(() =>
@@ -270,7 +272,9 @@ class ShelterProfile extends Component {
             <div className="adoptable-pets-cards-title">
               <p> Adoptable Pets</p>
             </div>
-            <div>{petsDisplay}</div>
+            <Container fluid>
+              <Row>{petsDisplay}</Row>
+            </Container>
           </div>
         </div>
       </div>

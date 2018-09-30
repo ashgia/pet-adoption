@@ -1,0 +1,213 @@
+.shelterdetails-body {
+  /* display: flex;
+    flex-direction: column; */
+  /* background-image: #ffcf02; */
+
+  /* background-size: 100% 75%; */
+}
+
+/* .shelterdetails-boxcolor {
+    background-color: #ffcf02;
+    width: 80vh;
+    z-index: -1;
+  } */
+
+.shelterdetails-mainbox {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.shelterdetails-mainbox-left {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  /* margin: 30px; */
+  padding: 30px;
+  width: 700px;
+  height: 700px;
+}
+
+.user-pic-box-shelterdetails {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+
+/* .user-pic-shelterdetails {
+  width: 100px;
+  height: 100px;
+} */
+
+#shelterdetailspic {
+  display: flex;
+  margin-left: 100px;
+  width: 280px;
+  height: 280px;
+}
+
+.profile-bottom-left {
+  height: 400px;
+  width: 400px;
+  margin-left: 200px;
+  display: flex;
+
+  /* margin-left: 200px; */
+}
+
+.profile-bottom-left-right {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  margin-right: 10px;
+}
+
+.address {
+  width: 200px;
+  height: 40px;
+}
+
+.shelterdetails-mainbox-right {
+  /* border: 1px solid black; */
+  /* margin: 30px; */
+  padding: 30px;
+  width: 600px;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile-right {
+  justify-content: flex-start;
+  margin-top: 0;
+  width: 550px;
+  height: 650px;
+}
+
+.profile-top-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+}
+
+.user-name-shelterdetails {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  font-family: "Bitter", serif;
+}
+
+.city-shelterdetails {
+  display: flex;
+  justify-content: flex-start;
+
+  font-size: 15px;
+  font-family: "Bitter", serif;
+  color: gray;
+}
+
+.profile-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+.aboutme-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 21px;
+  height: 30px;
+}
+
+.aboutme-shelterdetails {
+  display: flex;
+  justify-content: flex-start;
+  height: 100px;
+  font-size: 15px;
+  font-family: "Bitter", serif;
+}
+
+.profile-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 90px;
+}
+.mission-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 21px;
+  height: 30px;
+}
+
+.mission {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  font-size: 15px;
+  font-family: "Bitter", serif;
+}
+
+.profile-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.policy-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 21px;
+  height: 30px;
+}
+
+.policy {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  font-size: 15px;
+  font-family: "Bitter", serif;
+}
+
+p {
+  font-family: "Bitter", serif;
+}
+
+#info {
+  height: 40px;
+  font-family: "Bitter", serif;
+  font-size: 15px;
+}
+
+.phonenumber {
+  padding-top: 5px;
+}
+
+.email {
+  padding-top: 10px;
+}
+
+.adoptable-pets-cards-title {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 160px;
+  font-size: 32px;
+  font-family: "Bitter", serif;
+}
+
+.Chat-Link {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Bitter", serif;
+}
+
+.adoptable-pets-box-shelterdetails {
+  margin-left: 40px;
+}
