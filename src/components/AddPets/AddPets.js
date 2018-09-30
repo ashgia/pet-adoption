@@ -16,7 +16,9 @@ import {
   Label,
   Input,
   FormText,
-  Button
+  Button,
+  Container,
+  Row
 } from "reactstrap";
 import { connect } from "react-redux";
 import "./AddPets.css";
@@ -103,7 +105,7 @@ class AddPets extends Component {
             //   <img src={pet.petphotoURL} />
             //   {pet.petname}
             // </div>
-            <Col sm="3">
+            <Col lg="4">
               <div className="petcarddeck">
                 <CardDeck>
                   <div className="petcarddeck-single">
@@ -330,12 +332,14 @@ class AddPets extends Component {
                   </Button>
                   <div className="complete-button">
                     <Link to="/shelterProfile">
-                      <Button>Complete</Button>
+                      <Button>Done</Button>
                     </Link>
                   </div>
                 </div>
               </Form>
-              <div>{petsDisplay}</div>
+              <Container fluid>
+                <Row>{petsDisplay}</Row>
+              </Container>
             </div>
           </div>
         </div>

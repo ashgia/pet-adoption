@@ -26,6 +26,7 @@ import {
   updateMission,
   updatePolicy
 } from "../../ducks/userReducer";
+import "./ShelterProfile.css";
 // import { getPets } from "../../ducks/petReducer";
 
 class ShelterProfile extends Component {
@@ -83,9 +84,17 @@ class ShelterProfile extends Component {
     let button;
 
     if (this.state.mode === "view") {
-      button = <button onClick={this.handleEdit}>Edit</button>;
+      button = (
+        <button id="edit-button" onClick={this.handleEdit}>
+          Edit
+        </button>
+      );
     } else {
-      button = <button onClick={() => this.handleSave(cb)}>Save</button>;
+      button = (
+        <button id="save-button" onClick={() => this.handleSave(cb)}>
+          Save
+        </button>
+      );
     }
 
     return button;
@@ -109,7 +118,7 @@ class ShelterProfile extends Component {
     this.state.pets.length > 0
       ? (petsDisplay = this.state.pets.map(pet => {
           return (
-            <Col sm="3">
+            <Col lg="4">
               <div className="petcarddeck">
                 <CardDeck>
                   <div className="petcarddeck-single">
@@ -143,87 +152,124 @@ class ShelterProfile extends Component {
         }))
       : (petsDisplay = null);
     return (
-      <div className="body-profile-page">
+      <div className="shelterprofile-body">
+        <div className="shelterprofile-boxcolor" />
         <div className="navbar">
           <NavBarShelter />
         </div>
-        <div>
-          <h1>User Profile</h1>
-          <div className="profile-introduction">
-            <div className="profile-introduction-background">
-              <div clasName="introduction-inner">
+
+        <div className="shelterprofile-mainbox">
+          <div className="shelterprofile-mainbox-left">
+            <div className="user-pic-box">
+              <div className="user-pic">
+                <img src={this.props.user.photoURL} />
+                {this.renderInputField("photoURL")}
+                {this.renderButton(() =>
+                  this.props.updatePhotoURL(this.state.photoURL)
+                )}
+              </div>
+            </div>
+            <div className="profile-bottom-left">
+              <div className="profile-bottom-left-right">
+                <div className="info-title">
+                  <p>Information</p>
+                </div>
+                <div id="info" className="address">
+                  {this.props.user.address}
+                  {this.renderInputField("address")}
+                  {this.renderButton(() =>
+                    this.props.updateAddress(this.state.address)
+                  )}
+                </div>
+                <div id="info" className="phonenumber">
+                  {this.props.user.phoneNumber}
+                  {this.renderInputField("phoneNumber")}
+                  {this.renderButton(() =>
+                    this.props.updateNumber(this.state.phoneNumber)
+                  )}
+                </div>
+                <div id="info" className="email">
+                  {this.props.user.email}
+                  {this.renderInputField("email")}
+                  {this.renderButton(() =>
+                    this.props.updateEmail(this.state.email)
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="shelterprofile-mainbox-right">
+            {/* <div className="shelterprofile-title">
+              <p>Your Shelter Profile</p>
+            </div> */}
+            {/* <div className="profile-info"> */}
+            <div className="profile-right">
+              <div className="profile-top-top">
                 <div className="user-name">
-                  name: {this.props.user.fullname}
+                  {this.props.user.fullname}
                   {this.renderInputField("fullname")}
                   {this.renderButton(() =>
                     this.props.updateName(this.state.fullname)
                   )}
                 </div>
                 <div className="city">
-                  city: {this.props.user.city}
+                  {this.props.user.city}
                   {this.renderInputField("city")}
                   {this.renderButton(() =>
                     this.props.updateCity(this.state.city)
                   )}
                 </div>
                 <div className="aboutme">
-                  about me: {this.props.user.aboutMe}
-                  {this.renderInputField("aboutMe")}
-                  {this.renderButton(() =>
-                    this.props.updateAboutMe(this.state.aboutMe)
-                  )}
+                  <div className="aboutme-title">
+                    <p>About Us</p>
+                  </div>
+                  <div className="aboutme-text">
+                    {this.props.user.aboutMe}
+                    {this.renderInputField("aboutMe")}
+                    {this.renderButton(() =>
+                      this.props.updateAboutMe(this.state.aboutMe)
+                    )}
+                  </div>
                 </div>
+              </div>
+              <div className="profile-middle">
+                <div className="mission-title">
+                  <p>Our Mission</p>
+                </div>
+
                 <div className="mission">
-                  mission: {this.props.user.mission}
+                  {this.props.user.mission}
                   {this.renderInputField("mission")}
                   {this.renderButton(() =>
                     this.props.updateMission(this.state.mission)
                   )}
                 </div>
+              </div>
+              <div className="profile-bottom">
+                <div className="policy-title">
+                  <p>Our Policy</p>
+                </div>
                 <div className="policy">
-                  policy: {this.props.user.policy}
+                  {this.props.user.policy}
                   {this.renderInputField("policy")}
                   {this.renderButton(() =>
                     this.props.updatePolicy(this.state.policy)
                   )}
                 </div>
-                <div className="user-pic">
-                  photo: <img src={this.props.user.photoURL} />
-                  {this.renderInputField("photoURL")}
-                  {this.renderButton(() =>
-                    this.props.updatePhotoURL(this.state.photoURL)
-                  )}
-                </div>
               </div>
             </div>
           </div>
-          <div className="shelter-mainbox">
-            <h1>Basic Info</h1>
-
-            <div className="address">
-              address: {this.props.user.address}
-              {this.renderInputField("address")}
-              {this.renderButton(() =>
-                this.props.updateAddress(this.state.address)
-              )}
-            </div>
-            <div className="phonenumber">
-              phone Number: {this.props.user.phoneNumber}
-              {this.renderInputField("phoneNumber")}
-              {this.renderButton(() =>
-                this.props.updateNumber(this.state.phoneNumber)
-              )}
-            </div>
-            <div className="email">
-              email: {this.props.user.email}
-              {this.renderInputField("email")}
-              {this.renderButton(() =>
-                this.props.updateEmail(this.state.email)
-              )}
-            </div>
+        </div>
+        <div className="adoptable-pets-box">
+          <div className="add-pets-button">
             <Link to="/addpets">
               <Button>Add Pets</Button>
             </Link>
+          </div>
+          <div className="adoptable-pets-cards">
+            <div className="adoptable-pets-cards-title">
+              <p> Adoptable Pets</p>
+            </div>
             <div>{petsDisplay}</div>
           </div>
         </div>

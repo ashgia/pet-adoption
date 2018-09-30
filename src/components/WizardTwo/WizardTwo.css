@@ -16,10 +16,13 @@
   width: 65%;
   margin: auto;
   margin-top: 50px;
-
+  border-radius: 10px;
   padding: 110px;
   padding-bottom: 100px;
   background-color: white;
+  -webkit-box-shadow: -6px 1px 115px 0px rgba(181, 151, 194, 1);
+  -moz-box-shadow: -6px 1px 115px 0px rgba(181, 151, 194, 1);
+  box-shadow: -6px 1px 115px 0px rgba(181, 151, 194, 1);
 }
 
 .wizardtwo-title {
@@ -33,11 +36,13 @@
 
 .wizardtwo-button {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
+
+  margin-right: 200px;
   font-family: "Bitter", serif;
   margin-top: 20px;
   margin-bottom: none;
-  padding: none;
+  /* padding-right: 15px; */
 }
 
 .wizardtwo-lowertext-container {

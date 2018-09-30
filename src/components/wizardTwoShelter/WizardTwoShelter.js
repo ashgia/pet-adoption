@@ -35,20 +35,21 @@ class WizardTwoShelter extends Component {
                     />
                   </Col>
                 </FormGroup>
-
-                <Link to="/wizardThreeShelter">
-                  <Button>Next</Button>
-                </Link>
+                <div className="wizardtwo-button">
+                  <Link to="/wizardThreeShelter">
+                    <Button>Next</Button>
+                  </Link>
+                </div>
               </Form>
             </div>
           </div>
           <div className="wizardtwoshelter-lowertext-container">
             <div className="wizardtwoshelter-lowertext">
               <p>
-                Gulf menhaden, sailfish ling sleeper sablefish driftwood catfish
-                collared dogfish butterflyfish remora crevice kelpfish grass
-                carp? Olive flounder false trevally merluccid hake river
-                stingray, barb.
+                Tulu's friends gives the opportunity for local animal
+                communities in all cities to get together, shelters and pet
+                owners. We want to provide a platform for any and all
+                communities based on your location.
               </p>
             </div>
           </div>

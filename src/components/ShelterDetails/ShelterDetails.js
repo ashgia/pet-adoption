@@ -12,7 +12,9 @@ import {
   CardSubtitle,
   CardBody,
   Col,
-  Button
+  Button,
+  Row,
+  Container
 } from "reactstrap";
 
 class ShelterDetails extends Component {
@@ -30,20 +32,20 @@ class ShelterDetails extends Component {
       this.setState({ shelter: response.value.data[0] });
     });
     axios.get(`/api/pets/${this.state.shelter.userid}`).then(response => {
-      console.log(response);
+      // console.log(response);
       this.setState({ pets: response.data });
     });
   }
 
   render() {
     // console.log(this.props);
-    console.log("PETS:", this.state.pets);
+    // console.log("PETS:", this.state.pets);
     let petsDisplay = [];
     this.state.pets.length > 0
       ? (petsDisplay = this.state.pets.map(pet => {
           return (
             <Col sm="3">
-              <div className="petcarddeck">
+              <div className="carddeck">
                 <CardDeck>
                   <div className="petcarddeck-single">
                     <Card>
@@ -61,11 +63,17 @@ class ShelterDetails extends Component {
                         alt="Card image cap"
                       />
                       <CardBody>
-                        <CardText>{pet.breed}</CardText>
-                        <CardText>{pet.gender}</CardText>
-                        <CardText>{pet.age}</CardText>
-                        <CardText>{pet.size}</CardText>
-                        <CardText>{pet.color}</CardText>
+                        <CardText>
+                          {pet.breed}
+                          <br />
+                          {pet.gender}
+                          <br />
+                          {pet.age}
+                          <br />
+                          {pet.size}
+                          <br />
+                          {pet.color}
+                        </CardText>
                       </CardBody>
                     </Card>
                   </div>
@@ -120,8 +128,10 @@ class ShelterDetails extends Component {
           >
             Chat With Us
           </Link>
-          {petsDisplay}
         </div>
+        <Container fluid>
+          <Row>{petsDisplay}</Row>
+        </Container>
       </div>
     );
   }

@@ -1,0 +1,187 @@
+.shelterprofile-body {
+  /* background-color: #ffcf02;
+  background-size: 100% 75%; */
+  /* display: flex;
+  flex-direction: column; */
+  /* background-image: #ffcf02; */
+
+  /* background-size: 100% 75%; */
+}
+
+.shelterprofile-boxcolor {
+  background-color: #ffcf02;
+  background-size: 100% 75%;
+}
+
+.shelterprofile-mainbox {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.shelterprofile-mainbox-left {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  /* margin: 30px; */
+  padding: 30px;
+  width: 700px;
+  height: 700px;
+}
+
+.user-pic-box {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  padding: 30px;
+
+  border: 1px solid black;
+  margin-bottom: 100px;
+}
+
+.user-pic {
+  margin-left: 50px;
+
+  width: 370px;
+  height: 250px;
+}
+
+.profile-bottom-left {
+  height: 400px;
+  width: 400px;
+  margin-left: 200px;
+  display: flex;
+
+  /* margin-left: 200px; */
+}
+
+.profile-bottom-left-right {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  margin-right: 10px;
+}
+
+.shelterprofile-mainbox-right {
+  border: 1px solid black;
+  /* margin: 30px; */
+  padding: 30px;
+  width: 600px;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile-right {
+  justify-content: flex-start;
+  margin-top: 0;
+  width: 550px;
+  height: 650px;
+}
+
+.profile-top-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+}
+
+.user-name {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.city {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.aboutme-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 22px;
+}
+
+.aboutme-text {
+  display: flex;
+  justify-content: flex-start;
+  height: 80px;
+}
+
+.profile-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-bottom: 30px;
+}
+.mission-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 22px;
+}
+
+.mission {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+}
+
+.profile-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+
+.policy-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 22px;
+}
+
+.policy {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+}
+
+p {
+  font-family: "Bitter", serif;
+}
+
+#info {
+  height: 40px;
+  font-family: "Bitter", serif;
+  font-size: 15px;
+}
+
+.add-pets-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#edit-button {
+  margin-left: 20px;
+  height: 25px;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-family: "Bitter", serif;
+  border-radius: 2px;
+  /* margin: 1px; */
+  background-color: white;
+  color: gray;
+}

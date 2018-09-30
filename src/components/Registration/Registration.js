@@ -36,10 +36,12 @@ class Registration extends Component {
           <div className="reg-lowertext-container">
             <div className="registration-lowertext">
               <p>
-                Gulf menhaden, sailfish ling sleeper sablefish driftwood catfish
-                collared dogfish butterflyfish remora crevice kelpfish grass
-                carp? Olive flounder false trevally merluccid hake river
-                stingray, barb.
+                If you are looking to adopt, you will be able to create a
+                profile where your local shelters can match you with a potential
+                future furry family member. If you are a shelter, you can join
+                many other shelters in the area and proudly display your
+                adoptable pets and information on your shelter on your own
+                profile. Local pet lovers can contact you directly about a pet.
               </p>
             </div>
           </div>
