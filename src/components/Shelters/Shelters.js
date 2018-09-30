@@ -26,7 +26,6 @@ class Shelters extends Component {
     };
   }
   async componentDidMount() {
-    
     await this.props.getShelters().then(response => {
       this.setState({ shelters: response.value.data });
     });

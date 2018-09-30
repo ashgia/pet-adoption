@@ -34,7 +34,23 @@ module.exports = {
   },
   getPets: (req, res) => {
     const db = req.app.get("db");
-    db.get_pets().then(response => {
+    console.log(req.user, "REQ USER");
+    db.get_pets(req.user.userid).then(response => {
+      res.status(200).send(response);
+    });
+  },
+  getPetsShelterDetails: (req, res) => {
+    const db = req.app.get("db");
+    console.log("USERID:", req.params);
+    db.get_pets_shelterdetails(req.params.id).then(response => {
+      console.log("PETS:", response);
+      res.status(200).send(response);
+    });
+  },
+  deletePet: (req, res) => {
+    const db = req.app.get("db");
+    console.log("PETNAME: ", req.body.petname);
+    db.delete_pet(req.body.petname).then(response => {
       res.status(200).send(response);
     });
   }

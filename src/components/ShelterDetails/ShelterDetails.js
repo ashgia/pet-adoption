@@ -3,24 +3,78 @@ import { connect } from "react-redux";
 import NavBarSide from "../NavBarSide/NavBarSide";
 import { getProfile } from "../../ducks/userReducer";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import {
+  Card,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardSubtitle,
+  CardBody,
+  Col,
+  Button
+} from "reactstrap";
 
 class ShelterDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shelter: {}
+      shelter: {},
+      pets: []
     };
   }
 
   async componentDidMount() {
     await this.props.getProfile(this.props.match.params.id).then(response => {
-      console.log(response);
+      // console.log(response);
       this.setState({ shelter: response.value.data[0] });
+    });
+    axios.get(`/api/pets/${this.state.shelter.userid}`).then(response => {
+      console.log(response);
+      this.setState({ pets: response.data });
     });
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
+    console.log("PETS:", this.state.pets);
+    let petsDisplay = [];
+    this.state.pets.length > 0
+      ? (petsDisplay = this.state.pets.map(pet => {
+          return (
+            <Col sm="3">
+              <div className="petcarddeck">
+                <CardDeck>
+                  <div className="petcarddeck-single">
+                    <Card>
+                      <CardBody>
+                        <CardTitle>
+                          <div className="petname">{pet.petname}</div>
+                        </CardTitle>
+                        <CardSubtitle>
+                          <div className="petspecies">{pet.species}</div>
+                        </CardSubtitle>
+                      </CardBody>
+                      <img
+                        width="100%"
+                        src={pet.photourl}
+                        alt="Card image cap"
+                      />
+                      <CardBody>
+                        <CardText>{pet.breed}</CardText>
+                        <CardText>{pet.gender}</CardText>
+                        <CardText>{pet.age}</CardText>
+                        <CardText>{pet.size}</CardText>
+                        <CardText>{pet.color}</CardText>
+                      </CardBody>
+                    </Card>
+                  </div>
+                </CardDeck>
+              </div>
+            </Col>
+          );
+        }))
+      : (petsDisplay = null);
     return (
       <div className="body-profile-page">
         <div className="navbar">
@@ -66,6 +120,7 @@ class ShelterDetails extends Component {
           >
             Chat With Us
           </Link>
+          {petsDisplay}
         </div>
       </div>
     );

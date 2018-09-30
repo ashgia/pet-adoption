@@ -1,0 +1,1 @@
+DELETE FROM pets WHERE petname = $1;

@@ -76,6 +76,20 @@ class AddPets extends Component {
       petgoodWith: "",
       petphotoURL: ""
     });
+
+    this.deletePet = petname => {
+      axios.delete("api/user/pets/pet", petname).then(response => {
+        this.setState({ pets: response.data });
+      });
+    };
+    // deletePet() {
+    //   axios.delete("/api/user/pets/pet").then(response => {
+    //     console.log(response)
+    //     this.setState({
+    //       pets: response.data
+    //     })
+    // })
+    // }
   }
 
   render() {
@@ -113,7 +127,13 @@ class AddPets extends Component {
                         <CardText>{pet.petage}</CardText>
                         <CardText>{pet.petsize}</CardText>
                         <CardText>{pet.petcolor}</CardText>
-
+                        <Button
+                          onClick={e => {
+                            this.deletePet(pet.petname);
+                          }}
+                        >
+                          Delete
+                        </Button>
                         {/* <Link
                           to={`/shelter/${shelter.userid}`}
                           className="shelter-link"

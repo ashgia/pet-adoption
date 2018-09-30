@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarShelter from "../NavBarShelter/NavBarShelter";
-import { Button } from "reactstrap";
+import {
+  Card,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardSubtitle,
+  CardBody,
+  Col,
+  Button
+} from "reactstrap";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import {
   getUser,
@@ -82,24 +92,56 @@ class ShelterProfile extends Component {
   }
   componentDidMount() {
     this.props.getUser();
+    // const { id } = this.props.user.user.userid;
+    axios.get("/api/users/shelter/pets").then(response => {
+      console.log(response);
+      this.setState({ pets: response.data });
+    });
+
     // this.props.getPets().then(response => {
     //   this.setState({ pets: response.value.data });
     // });
   }
   render() {
-    // console.log(this.props);
-    // let petsDisplay = this.state.pets.map(pets => {
-    //   return (
-    //     <div className="pets-container">
-    //       <div className="petcard">{petsDisplay}</div>
-    //       <div className="addpets-button">
-    //         <Link to="/addPets">
-    //           <Button> Add Pets </Button>
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   );
-    // });
+    console.log(this.props);
+    console.log(this.state.pets);
+    let petsDisplay = [];
+    this.state.pets.length > 0
+      ? (petsDisplay = this.state.pets.map(pet => {
+          return (
+            <Col sm="3">
+              <div className="petcarddeck">
+                <CardDeck>
+                  <div className="petcarddeck-single">
+                    <Card>
+                      <CardBody>
+                        <CardTitle>
+                          <div className="petname">{pet.petname}</div>
+                        </CardTitle>
+                        <CardSubtitle>
+                          <div className="petspecies">{pet.species}</div>
+                        </CardSubtitle>
+                      </CardBody>
+                      <img
+                        width="100%"
+                        src={pet.photourl}
+                        alt="Card image cap"
+                      />
+                      <CardBody>
+                        <CardText>{pet.breed}</CardText>
+                        <CardText>{pet.gender}</CardText>
+                        <CardText>{pet.age}</CardText>
+                        <CardText>{pet.size}</CardText>
+                        <CardText>{pet.color}</CardText>
+                      </CardBody>
+                    </Card>
+                  </div>
+                </CardDeck>
+              </div>
+            </Col>
+          );
+        }))
+      : (petsDisplay = null);
     return (
       <div className="body-profile-page">
         <div className="navbar">
@@ -182,6 +224,7 @@ class ShelterProfile extends Component {
             <Link to="/addpets">
               <Button>Add Pets</Button>
             </Link>
+            <div>{petsDisplay}</div>
           </div>
         </div>
       </div>

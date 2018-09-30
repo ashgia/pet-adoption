@@ -1,9 +1,85 @@
 import React, { Component } from "react";
 import NavBarSide from "../NavBarSide/NavBarSide";
+import Input from "../Input/Input";
+import { connect } from "react-redux";
+import { getShelters } from "../../ducks/userReducer";
+import {
+  Card,
+  CardTitle,
+  CardText,
+  CardDeck,
+  CardSubtitle,
+  CardBody,
+  Col,
+  Row,
+  Container
+} from "reactstrap";
+import { Link } from "react-router-dom";
 import "./Volunteer.css";
 
 class Volunteer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      shelters: [],
+      search: ""
+    };
+  }
+  async componentDidMount() {
+    await this.props.getShelters().then(response => {
+      this.setState({ shelters: response.value.data });
+    });
+  }
+  onChangeHandler = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+  filterHandler(filter) {
+    this.setState({ search: filter });
+  }
   render() {
+    let sheltersDisplay = this.state.shelters
+      .filter(shelter => shelter.city.includes(this.state.search))
+      .map(shelter => {
+        if (shelter.city.includes(this.state.search)) {
+          return (
+            // <CardColumns sm="4">
+            <Col sm="3">
+              <div className="carddeck">
+                <CardDeck>
+                  <div className="carddeck-single">
+                    <Card>
+                      <CardBody>
+                        <CardTitle>
+                          <div className="fullname">{shelter.fullname}</div>
+                        </CardTitle>
+                        <CardSubtitle>
+                          <div className="city">{shelter.city}</div>
+                        </CardSubtitle>
+                      </CardBody>
+                      <img
+                        width="100%"
+                        src={shelter.photourl}
+                        alt="Card image cap"
+                      />
+                      <CardBody>
+                        <CardText>{shelter.address}</CardText>
+                        {/* <CardLink href="#">About Us</CardLink> */}
+                        <Link
+                          to={`/shelter/${shelter.userid}`}
+                          className="shelter-link"
+                        >
+                          About Us
+                        </Link>
+                        {/* <CardLink href="#">Contact</CardLink> */}
+                      </CardBody>
+                    </Card>
+                  </div>
+                </CardDeck>
+              </div>
+            </Col>
+          );
+        }
+      });
     return (
       <div className="volunteer-body">
         <div className="volunteer-boxcolor">
@@ -12,7 +88,7 @@ class Volunteer extends Component {
           </div>
           <div className="volunteer-textbox">
             <div className="volunteer-title">
-              <p>How It Works</p>
+              <p>Volunteer At A Shelter Near You</p>
             </div>
             <div className="volunteer-info">
               <p>
@@ -23,68 +99,32 @@ class Volunteer extends Component {
                 moon. Spot hogfish banded grunt, mystery snail happy flounder.
               </p>
             </div>
-          </div>
-          <div className="volunteer2-section">
-            <div className="volunteer2-image">
-              <img
-                src="https://images.unsplash.com/photo-1527362950785-f487a7c1fe48?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b9e87b6b5e747bbb40bceffb8968536b&auto=format&fit=crop&w=1831&q=80"
-                alt="white dog with girl"
-                style={{
-                  height: "750px",
-                  width: "500px"
-                }}
-              />
-            </div>
-            <div className="volunteer2-text">
-              <div className="volunteer2-title">
-                <p>About us</p>
-              </div>
-              <div className="volunteer2-info">
-                <p>
-                  Wobbegong shark peaclam swimming. Peppered moray clownfish
-                  hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                  soldierfish banded sole jump. Yellow pseudochromis weasel
-                  shark shadow, darkness in deap ocean an.
-                </p>
+            <div className="search-input-container">
+              <div className="search-title">Search by City</div>
+              <div className="search-input">
+                <Input
+                  className="search-input-box"
+                  changed={e => this.filterHandler(e.target.value)}
+                  placeholder="ex. Houston"
+                />
               </div>
             </div>
           </div>
-          <div className="volunteer3-section">
-            <div className="volunteer3-image">
-              <img
-                src="https://images.unsplash.com/photo-1521354465180-c1ceac1d709a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=64232dd88cd04a04d20b049b34daa029&auto=format&fit=crop&w=1050&q=80"
-                alt="dog in orange car"
-                style={{
-                  height: "400px",
-                  width: "650px"
-                }}
-              />
-            </div>
-            <div className="volunteer3-text">
-              <div className="volunteer3-title">
-                <p>About us</p>
-              </div>
-              <div className="volunteer3-info">
-                <p>
-                  Wobbegong shark peaclam swimming. Peppered moray clownfish
-                  hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                  soldierfish banded sole jump. Yellow pseudochromis weasel
-                  shark shadow, darkness in deap ocean an.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <footer className="footer">
-            <div className="footer-container">
-              <span className="text-muted">footer content here.</span>
-            </div>
-          </footer>
+
+          <Container fluid>
+            <Row>{sheltersDisplay}</Row>
+          </Container>
         </div>
       </div>
     );
   }
 }
 
-export default Volunteer;
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  {
+    getShelters
+  }
+)(Volunteer);

@@ -27,8 +27,8 @@ class NavBarSide extends Component {
           </NavItem>
           <div className="side-nav-link-right">
             <NavItem>
-              <NavLink className="side-nav-link2" tag={Link} to="/howitworks">
-                How It Works
+              <NavLink className="side-nav-link2" tag={Link} to="/userProfile">
+                Profile
               </NavLink>
             </NavItem>
             <NavItem>
@@ -37,8 +37,12 @@ class NavBarSide extends Component {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="side-nav-link4" tag={Link} to="/volunteer">
-                Volunteer
+              <NavLink
+                className="side-nav-link4"
+                tag={Link}
+                to={`/chat/${this.props.user.userid}`}
+              >
+                Messages
               </NavLink>
             </NavItem>
             <NavItem>

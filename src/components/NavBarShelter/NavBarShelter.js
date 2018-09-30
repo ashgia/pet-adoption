@@ -20,19 +20,19 @@ class NavBarShelter extends Component {
     return (
       <div id="navbar-shelter-id">
         <Nav className="navbar-shelter">
+          <NavItem>
+            <NavLink className="shelter-nav-link1" tag={Link} to="/">
+              Tulu's Friends
+            </NavLink>
+          </NavItem>
           <div className="shelter-nav-link-right">
-            <NavItem>
-              <NavLink className="shelter-nav-link1" tag={Link} to="/">
-                Tulu's Friends
-              </NavLink>
-            </NavItem>
             <NavItem>
               <NavLink
                 className="shelter-nav-link2"
                 tag={Link}
-                to="/howitworks"
+                to="/shelterProfile"
               >
-                How It Works
+                Profile
               </NavLink>
             </NavItem>
             <NavItem>
@@ -46,23 +46,13 @@ class NavBarShelter extends Component {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="shelter-nav-link5" tag={Link} to="/volunteer">
-                Volunteer
+              <NavLink
+                className="shelter-nav-link5"
+                tag={Link}
+                to={`/chat/${this.props.user.userid}`}
+              >
+                Messages
               </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink className="shelter-nav-link6" tag={Link} to="/donate">
-                Donate
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              {/* <NavLink
-              className="shelter-nav-link7"
-              tag={Link}
-              to={`/chat/${this.props.user.userid}`}
-            >
-              Messages
-            </NavLink> */}
             </NavItem>
           </div>
         </Nav>

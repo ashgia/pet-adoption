@@ -1,6 +1,6 @@
 module.exports = {
   createUser: (req, res, next) => {
-    console.log(req.body);
+    console.log(req.body, "BODY");
     const db = req.app.get("db");
     const {
       fullname,

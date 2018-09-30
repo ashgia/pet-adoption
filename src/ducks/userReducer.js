@@ -389,7 +389,7 @@ export function getShelters() {
 }
 
 export function getProfile(id) {
-  console.log(id);
+  // console.log(id);
   return {
     type: GET_PROFILE,
     payload: axios(`/api/profile/${id}`)
@@ -397,7 +397,7 @@ export function getProfile(id) {
 }
 
 export function getSocketID(id) {
-  console.log(id);
+  // console.log(id);
   return {
     type: GET_SOCKET_ID,
     payload: axios(`/api/user/chat/${id}`)
