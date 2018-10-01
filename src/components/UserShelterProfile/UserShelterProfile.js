@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarShelter from "../NavBarShelter/NavBarShelter";
 import { getProfile } from "../../ducks/userReducer";
+import { Link } from "react-router-dom";
 import "./UserShelterProfile.css";
+import { Button } from "reactstrap";
 
 class UserShelterProfile extends Component {
   constructor(props) {
@@ -41,6 +43,11 @@ class UserShelterProfile extends Component {
                 </div>
                 <div id="usershelter" className="email">
                   {this.state.user.email}
+                </div>
+                <div className="Chat-Link">
+                  <Link to="/chat">
+                    <Button>Chat With Me</Button>
+                  </Link>
                 </div>
               </div>
             </div>
