@@ -41,7 +41,7 @@
 .howitworks2-image {
   display: flex;
   position: absolute;
-  margin-left: 150px;
+  margin-left: 180px;
 }
 
 .howitworks2-text {
@@ -49,7 +49,7 @@
   flex-direction: column;
   width: 390px;
   margin-left: auto;
-  margin-right: 300px;
+  margin-right: 600px;
   margin-top: 430px;
 }
 
@@ -60,6 +60,7 @@
   margin-bottom: 0;
   font-size: 17px;
   height: 30px;
+  color: gray;
 }
 
 .howitworks2-info {
@@ -75,7 +76,7 @@
 .howitworks3-image {
   display: flex;
   position: absolute;
-  margin-left: 630px;
+  margin-left: 800px;
   margin-top: 180px;
   margin-bottom: 200px;
 }
@@ -83,10 +84,11 @@
 .howitworks3-text {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   width: 390px;
   margin-left: auto;
-  margin-left: 170px;
-  margin-top: 200px;
+  margin-left: 240px;
+  margin-top: 250px;
 }
 
 .howitworks3-title {
@@ -96,6 +98,7 @@
   margin-bottom: 0;
   font-size: 17px;
   height: 30px;
+  color: gray;
 }
 
 .howitworks3-info {
