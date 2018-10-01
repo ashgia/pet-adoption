@@ -13,7 +13,7 @@
 .shelters-boxcolor {
   width: 100%;
   position: absolute;
-  background-color: rgb(236, 194, 135);
+  background-color: rgb(246, 185, 99);
   height: 650px;
 }
 
@@ -23,7 +23,7 @@
   width: 65%;
   margin: auto;
   padding: 50px;
-  padding-bottom: 90px;
+  padding-bottom: 150px;
 }
 .shelters-title {
   display: flex;

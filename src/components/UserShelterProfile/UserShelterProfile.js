@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavBarShelter from "../NavBarShelter/NavBarShelter";
 import { getProfile } from "../../ducks/userReducer";
+import "./UserShelterProfile.css";
 
 class UserShelterProfile extends Component {
   constructor(props) {
@@ -20,44 +21,78 @@ class UserShelterProfile extends Component {
 
   render() {
     return (
-      <div className="body-profile-page">
+      <div className="usershelterprofile-body">
         <div className="navbar">
           <NavBarShelter />
         </div>
-        <div>
-          <h1>User Profile</h1>
-          <div className="profile-introduction">
-            <div className="profile-introduction-background">
-              <div clasName="introduction-inner">
-                <div className="user-name">
-                  name: {this.state.user.fullname}
-                </div>
-                <div className="city">city: {this.state.user.city}</div>
-                <div className="aboutme">
-                  about me: {this.state.user.aboutMe}
-                </div>
-
+        <div className="shelterprofile-mainbox">
+          <div className="shelterprofile-mainbox-left">
+            <div className="user-pic-box">
+              <div className="user-pic-shelterprofile">
                 <div className="user-pic">
-                  photo: {this.state.user.photoURL}
+                  <img src={this.state.user.photourl} />
+                </div>
+              </div>
+            </div>
+            <div className="profile-bottom-left">
+              <div className="profile-bottom-left-right">
+                <div className="info-title">
+                  <p id="information-title">Information</p>
+                </div>
+                <div id="usershelter" className="email">
+                  {this.state.user.email}
                 </div>
               </div>
             </div>
           </div>
-          <div className="user-mainbox">
-            <h1>Interested in: </h1>
-            <div className="species">species: {this.state.user.species}</div>
-            <div className="breed">breed: {this.state.user.breed}</div>
-            <div className="gender">gender: {this.state.user.gender}</div>
-            <div className="color">color: {this.state.user.color}</div>
-            <div className="size">size: {this.state.user.size}</div>
-            <div className="age">age: {this.state.user.age}</div>
-            <div className="goodwith">
-              good with: {this.state.user.goodWith}
+          <div className="usershelterprofile-mainbox-right">
+            <div className="userprofile-right">
+              <div className="userprofile-top-top">
+                <div className="user-name-userprofile">
+                  <div className="user-name-usershelter">
+                    {this.state.user.fullname}
+                  </div>
+                  <div className="city-usershelter">{this.state.user.city}</div>
+                  <div className="profile-top">
+                    <div className="aboutme-title">
+                      <p id="aboutme-usershelter">About Me</p>
+                    </div>
+                    <div id="usershelter" className="aboutme-usershelter">
+                      {this.state.user.aboutme}
+                    </div>
+                    <div id="usershelter" className="living">
+                      {this.state.user.living}
+                    </div>
+                  </div>
+                </div>
+                <div className="profile-middle">
+                  <div className="interest-title">
+                    <p id="interest-title">I Am Interested</p>
+                  </div>
+                  <div id="usershelter" className="species">
+                    species: {this.state.user.species}
+                  </div>
+                  <div id="usershelter" className="breed">
+                    breed: {this.state.user.breed}
+                  </div>
+                  <div id="usershelter" className="gender">
+                    gender: {this.state.user.gender}
+                  </div>
+                  <div id="usershelter" className="color">
+                    color: {this.state.user.color}
+                  </div>
+                  <div id="usershelter" className="size">
+                    size: {this.state.user.size}
+                  </div>
+                  <div id="usershelter" className="age">
+                    age: {this.state.user.age}
+                  </div>
+                  <div id="usershelter" className="goodwith">
+                    good with: {this.state.user.goodwith}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="living">
-              living situation: {this.state.user.living}
-            </div>
-            <div className="email">email: {this.state.user.email}</div>
           </div>
         </div>
       </div>

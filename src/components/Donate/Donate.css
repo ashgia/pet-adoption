@@ -30,6 +30,7 @@
 
 .donate-info {
   display: flex;
+  flex-direction: column;
   text-align: left;
   font-family: "Bitter", serif;
   font-size: 27px;

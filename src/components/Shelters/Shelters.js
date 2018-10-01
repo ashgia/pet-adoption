@@ -95,7 +95,9 @@ class Shelters extends Component {
               <p>
                 Wobbegong shark peaclam swimming. Peppered moray clownfish
                 hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                soldierfish banded sole jump.
+                soldierfish banded sole jump. Colorful soldierfish banded sole
+                jump. Wobbegong shark peaclam swimming. Peppered moray clownfish
+                hawkfish at seahorse hammerhead a funny snake eel.
               </p>
             </div>
             <div className="search-input-container">

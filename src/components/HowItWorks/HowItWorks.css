@@ -49,7 +49,7 @@
   flex-direction: column;
   width: 390px;
   margin-left: auto;
-  margin-right: 170px;
+  margin-right: 300px;
   margin-top: 430px;
 }
 
@@ -75,8 +75,8 @@
 .howitworks3-image {
   display: flex;
   position: absolute;
-  margin-left: 590px;
-  margin-top: 150px;
+  margin-left: 630px;
+  margin-top: 180px;
   margin-bottom: 200px;
 }
 

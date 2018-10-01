@@ -100,17 +100,15 @@ class ShelterDetails extends Component {
             <div className="profile-bottom-left">
               <div className="profile-bottom-left-right">
                 <div className="info-title">
-                  <p>Information</p>
+                  <p id="shelterdetails">Information</p>
                 </div>
                 <div id="info" className="address">
-                  {" "}
                   {this.state.shelter.address}
                 </div>
                 <div id="info" className="phonenumber">
                   {this.state.shelter.phone}
                 </div>
                 <div id="info" className="email">
-                  {" "}
                   {this.state.shelter.email}
                 </div>
                 <div className="Chat-Link">
@@ -136,22 +134,22 @@ class ShelterDetails extends Component {
                 </div>
               </div>
               <div className="profile-top">
-                <div className="aboutme-title">
-                  <p>About Us</p>
+                <div className="aboutme-title-shelterdetails">
+                  <p id="shelterdetails">About Us</p>
                 </div>
                 <div className="aboutme-shelterdetails">
                   {this.state.shelter.aboutme}
                 </div>
               </div>
               <div className="profile-middle">
-                <div className="mission-title">
-                  <p>Our Mission</p>
+                <div className="mission-title-shelterdetails">
+                  <p id="shelterdetails">Our Mission</p>
                 </div>
                 <div className="mission">{this.state.shelter.mission}</div>
               </div>
               <div className="profile-bottom">
-                <div className="policy-title">
-                  <p>Our Policy</p>
+                <div className="policy-title-shelterdetails">
+                  <p id="shelterdetails">Our Policy</p>
                 </div>
                 <div className="policy">{this.state.shelter.policy}</div>
               </div>
@@ -160,6 +158,9 @@ class ShelterDetails extends Component {
         </div>
 
         <div className="adoptable-pets-box-shelterdetails">
+          <div className="adoptable-pets-cards-title-shelterdetails">
+            <p id="adoptpet-title"> Adoptable Pets</p>
+          </div>
           <Container fluid>
             <Row>{petsDisplay}</Row>
           </Container>

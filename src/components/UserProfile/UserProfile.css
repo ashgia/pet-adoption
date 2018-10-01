@@ -6,6 +6,17 @@
   font-size: 15px;
 }
 
+.userprofile-body:before {
+  right: 0;
+  content: "";
+  display: block;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  background-color: rgba(239, 243, 139, 0.966);
+  /* border: 5px solid black; */
+}
 #save-button {
   margin-left: 20px;
   height: 20px;

@@ -92,11 +92,14 @@ class Volunteer extends Component {
             </div>
             <div className="volunteer-info">
               <p>
-                Wobbegong shark peaclam swimming. Peppered moray clownfish
-                hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                soldierfish banded sole jump. Yellow pseudochromis weasel shark
-                shadow, darkness in deap ocean an, Motionless Wabash pigtoe Full
-                moon. Spot hogfish banded grunt, mystery snail happy flounder.
+                Hundreds of shelters are in need of volunteers every day.
+                Without the care and dedication of volunteers, there would be
+                thousands of animals still without food and shelter. Not only
+                does Tulu’s Friends connect potential adopters with animal
+                shelters, but it is also dedicated to connect these shelters
+                with individuals who are looking to make a difference by
+                volunteering their time and services to improve the life of the
+                helpless animals.
               </p>
             </div>
             <div className="search-input-container">

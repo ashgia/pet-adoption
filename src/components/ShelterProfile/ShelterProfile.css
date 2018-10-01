@@ -1,16 +1,13 @@
-.shelterprofile-body {
-  /* display: flex;
-  flex-direction: column; */
-  /* background-image: #ffcf02; */
-
-  /* background-size: 100% 75%; */
-}
-
-/* .shelterprofile-boxcolor {
-  background-color: #ffcf02;
-  width: 80vh;
+.shelterprofile-body:before {
+  right: 0;
+  content: "";
+  display: block;
   z-index: -1;
-} */
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  background-color: rgba(240, 246, 79, 0.966);
+}
 
 .shelterprofile-mainbox {
   display: flex;
@@ -191,7 +188,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  font-family: "Bitter", serif;
+
   border-radius: 2px;
   /* margin: 1px; */
   background-color: white;
@@ -213,9 +210,8 @@ p {
   color: gray;
 }
 
-.add-pets-box {
-  display: flex;
-  flex-direction: column;
+.card-box {
+  margin: auto;
 }
 
 .add-pets-button {
@@ -223,9 +219,10 @@ p {
 }
 
 .adoptable-pets-cards-title {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 160px;
+  /* display: flex; */
+  /* margin: auto; */
+  /* justify-content: flex-start; */
+  margin: auto;
   font-size: 32px;
   font-family: "Bitter", serif;
 }

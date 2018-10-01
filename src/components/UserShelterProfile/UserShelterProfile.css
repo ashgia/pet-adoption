@@ -1,0 +1,67 @@
+.usershelterprofile-body:before {
+  right: 0;
+  content: "";
+  display: block;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 67%;
+  background-color: rgba(239, 243, 139, 0.966);
+  /* border: 5px solid black; */
+}
+
+#information-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.email {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.profile-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#usershelter {
+  font-size: 20px;
+  font-family: "Archivo Narrow", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+#aboutme-usershelter {
+  font-size: 30px;
+  font-family: "Archivo Narrow", sans-serif;
+  margin-bottom: 5px;
+}
+
+#interest-title {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 100px;
+  font-size: 40px;
+  margin-bottom: -10px;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.city-usershelter {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-family: "Archivo Narrow", sans-serif;
+  color: gray;
+  margin-top: -10px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
+.user-name-usershelter {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 50px;
+  font-family: "Archivo Narrow", sans-serif;
+}

@@ -120,7 +120,7 @@ class ShelterProfile extends Component {
     this.state.pets.length > 0
       ? (petsDisplay = this.state.pets.map(pet => {
           return (
-            <Col lg="4">
+            <Col lg="3">
               <div className="petcarddeck">
                 <CardDeck>
                   <div className="petcarddeck-single">
@@ -272,9 +272,11 @@ class ShelterProfile extends Component {
             <div className="adoptable-pets-cards-title">
               <p> Adoptable Pets</p>
             </div>
-            <Container fluid>
-              <Row>{petsDisplay}</Row>
-            </Container>
+            <div className="card-box">
+              <Container fluid>
+                <Row>{petsDisplay}</Row>
+              </Container>
+            </div>
           </div>
         </div>
       </div>

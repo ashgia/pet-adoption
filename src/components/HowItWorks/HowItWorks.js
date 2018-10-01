@@ -18,11 +18,10 @@ class HowItWorks extends Component {
               <p>
                 From the comfort of their personal computers, pet lovers can
                 directly match with animal shelters in their local area. Pet
-                owners are able to browse the local pets They can then reference
-                a shelter’s web page and discover what services it offers.
-                Tulu's Friends also includes discussion forums, a pet-care
-                resource directory and a library of free pet-care articles to
-                help keep pets in their homes.
+                owners are able to browse the local pets. They can then
+                reference a shelter’s web page and discover what services it
+                offers. Tulu's Friends also includes direct private messaging,
+                donation services, and volunteering opportunities.
               </p>
             </div>
           </div>
@@ -43,10 +42,10 @@ class HowItWorks extends Component {
               </div>
               <div className="howitworks2-info">
                 <p>
-                  Wobbegong shark peaclam swimming. Peppered moray clownfish
-                  hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                  soldierfish banded sole jump. Yellow pseudochromis weasel
-                  shark shadow, darkness in deap ocean an.
+                  Tulu’s Friends is dedicated to seamlessly connect potential
+                  adopters and various animal shelters so that the adopted
+                  animals and their newfound owners could start and build a
+                  special relationship that will last a lifetime.
                 </p>
               </div>
             </div>
@@ -64,14 +63,15 @@ class HowItWorks extends Component {
             </div>
             <div className="howitworks3-text">
               <div className="howitworks3-title">
-                <p>About us</p>
+                <p>Behind The Scenes</p>
               </div>
               <div className="howitworks3-info">
                 <p>
-                  Wobbegong shark peaclam swimming. Peppered moray clownfish
-                  hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                  soldierfish banded sole jump. Yellow pseudochromis weasel
-                  shark shadow, darkness in deap ocean an.
+                  Getting a furry friend was a huge commitment.I understood the
+                  commitment and perseverance it would take to raise a puppy but
+                  I could have never imagined the amount of joy I have
+                  experienced throughout this process. Tulu is a cocker spaniel
+                  I adopted and he has been the greatest gift to me.
                 </p>
               </div>
             </div>

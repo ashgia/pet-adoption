@@ -13,15 +13,17 @@ class Donate extends Component {
           </div>
           <div className="donate-textbox">
             <div className="donate-title">
-              <p>How It Works</p>
+              <p>How Donating Works</p>
             </div>
             <div className="donate-info">
               <p>
-                Wobbegong shark peaclam swimming. Peppered moray clownfish
-                hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                soldierfish banded sole jump. Yellow pseudochromis weasel shark
-                shadow, darkness in deap ocean an, Motionless Wabash pigtoe Full
-                moon. Spot hogfish banded grunt, mystery snail happy flounder.
+                The shelters would not be what they are today without the
+                generous financial support from donors. As non-profits, these
+                shelters will only use donations towards their costs so they can
+                do their best in rescuing more unfortunate animals from the
+                streets. Every dollar of donation goes a long way in saving the
+                lives of these animals. If you are interested in donating to
+                help these shelters, please click the donate button below.
               </p>
               <div className="donate-button">
                 <TakeMoney />
@@ -41,14 +43,17 @@ class Donate extends Component {
             </div>
             <div className="donate2-text">
               <div className="donate2-title">
-                <p>About us</p>
+                <p>This Week's Featured Shelter</p>
               </div>
               <div className="donate2-info">
+                <div className="featured-shelter-name">K-9 Angels</div>
                 <p>
-                  Wobbegong shark peaclam swimming. Peppered moray clownfish
-                  hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                  soldierfish banded sole jump. Yellow pseudochromis weasel
-                  shark shadow, darkness in deap ocean an.
+                  K-9 Angels Rescue is committed to rescuing and rehoming
+                  shelter dogs in and around the City of Houston, regardless of
+                  their breed or their circumstance. We are motivated by the
+                  dire need to educate the public about the effects of
+                  irresponsible breeding practices, while helping the community
+                  by alleviating overcrowding in area shelters.
                 </p>
               </div>
             </div>
@@ -70,10 +75,13 @@ class Donate extends Component {
               </div>
               <div className="donate3-info">
                 <p>
-                  Wobbegong shark peaclam swimming. Peppered moray clownfish
-                  hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                  soldierfish banded sole jump. Yellow pseudochromis weasel
-                  shark shadow, darkness in deap ocean an.
+                  The shelters would not be what they are today without the
+                  generous financial support from donors. As non-profits, these
+                  shelters will only use donations towards their costs so they
+                  can do their best in rescuing more unfortunate animals from
+                  the streets. Every dollar of donation goes a long way in
+                  saving the lives of these animals. If you are interested in
+                  donating to help these shelters, please click the link below.
                 </p>
               </div>
             </div>
