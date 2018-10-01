@@ -9,7 +9,7 @@ export default class SideBar extends Component {
 
     this.state = {
       userName,
-      reciever: "Ashley Nguyen"
+      reciever: "Ashley"
     };
   }
 
@@ -72,7 +72,7 @@ export default class SideBar extends Component {
                   ///// changed name to fullname
                   chat.users.find(fullname => {
                     return fullname !== user.fullname;
-                  }) || "Ashley";
+                  }) || "Arya";
                 const classNames =
                   activeChat && activeChat.chatIdObj === chat.chatIdObj
                     ? "active"

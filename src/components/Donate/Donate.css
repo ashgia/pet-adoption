@@ -24,8 +24,9 @@
   justify-content: flex-start;
   font-family: "Bitter", serif;
   margin-bottom: 0;
-  font-size: 20px;
-  height: 30px;
+  font-size: 25px;
+  padding-bottom: 5px;
+  /* height: 30px; */
 }
 
 .donate-info {
@@ -33,7 +34,7 @@
   flex-direction: column;
   text-align: left;
   font-family: "Bitter", serif;
-  font-size: 27px;
+  font-size: 20px;
 }
 
 .donate2-section {

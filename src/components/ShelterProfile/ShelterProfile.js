@@ -174,23 +174,23 @@ class ShelterProfile extends Component {
             <div className="profile-bottom-left">
               <div className="profile-bottom-left-right">
                 <div className="info-title">
-                  <p>Information</p>
+                  <p id="sheltertext">Information</p>
                 </div>
-                <div id="info" className="address">
+                <div id="sheltertextsmall" className="address">
                   {this.props.user.address}
                   {this.renderInputField("address")}
                   {this.renderButton(() =>
                     this.props.updateAddress(this.state.address)
                   )}
                 </div>
-                <div id="info" className="phonenumber">
+                <div id="sheltertextsmall" className="phonenumber">
                   {this.props.user.phoneNumber}
                   {this.renderInputField("phoneNumber")}
                   {this.renderButton(() =>
                     this.props.updateNumber(this.state.phoneNumber)
                   )}
                 </div>
-                <div id="info" className="email">
+                <div id="sheltertextsmall" className="email">
                   {this.props.user.email}
                   {this.renderInputField("email")}
                   {this.renderButton(() =>
@@ -223,9 +223,9 @@ class ShelterProfile extends Component {
                 </div>
                 <div className="profile-top">
                   <div className="aboutme-title">
-                    <p>About Us</p>
+                    <p id="sheltertext">About Us</p>
                   </div>
-                  <div className="aboutme-shelterprofile">
+                  <div id="sheltertextsmall" className="aboutme-shelterprofile">
                     {this.props.user.aboutMe}
                     {this.renderInputField("aboutMe")}
                     {this.renderButton(() =>
@@ -236,10 +236,10 @@ class ShelterProfile extends Component {
               </div>
               <div className="profile-middle">
                 <div className="mission-title">
-                  <p>Our Mission</p>
+                  <p id="sheltertext">Our Mission</p>
                 </div>
 
-                <div className="mission">
+                <div id="sheltertextsmall" className="mission">
                   {this.props.user.mission}
                   {this.renderInputField("mission")}
                   {this.renderButton(() =>
@@ -249,9 +249,9 @@ class ShelterProfile extends Component {
               </div>
               <div className="profile-bottom">
                 <div className="policy-title">
-                  <p>Our Policy</p>
+                  <p id="sheltertext">Our Policy</p>
                 </div>
-                <div className="policy">
+                <div id="sheltertextsmall" className="policy">
                   {this.props.user.policy}
                   {this.renderInputField("policy")}
                   {this.renderButton(() =>

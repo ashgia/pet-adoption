@@ -112,7 +112,7 @@ class UserProfile extends Component {
             <div className="user-pic-box">
               <div className="user-pic-shelterprofile">
                 <div className="user-pic">
-                  {this.props.user.photoURL}
+                  <img src={this.props.user.photoURL} />
                   {this.renderInputField("photoURL")}
                   {this.renderButton(() =>
                     this.props.updatePhotoURL(this.state.photoURL)
@@ -125,14 +125,14 @@ class UserProfile extends Component {
                 <div className="info-title">
                   <p>Information</p>
                 </div>
-                <div className="email">
+                <div id="userprofiletext" className="email">
                   {this.props.user.email}
                   {this.renderInputField("email")}
                   {this.renderButton(() =>
                     this.props.updateEmail(this.state.email)
                   )}
                 </div>
-                <div className="phonenumber">
+                <div id="userprofiletext" className="phonenumber">
                   {this.props.user.phoneNumber}
                   {this.renderInputField("phoneNumber")}
                   {this.renderButton(() =>
@@ -164,14 +164,14 @@ class UserProfile extends Component {
                   <div className="aboutme-title">
                     <p>About Me</p>
                   </div>
-                  <div className="aboutme-userprofile">
+                  <div id="userprofiletext" className="aboutme-userprofile">
                     {this.props.user.aboutMe}
                     {this.renderInputField("aboutMe")}
                     {this.renderButton(() =>
                       this.props.updateAboutMe(this.state.aboutMe)
                     )}
                   </div>
-                  <div className="living">
+                  <div id="userprofiletext" className="living">
                     {this.props.user.living}
                     {this.renderInputField("living")}
                     {this.renderButton(() =>
@@ -182,7 +182,7 @@ class UserProfile extends Component {
               </div>
               <div className="profile-middle">
                 <div className="interest-title">
-                  <p>I Am Interested</p>
+                  <p id="interest-titleprofile">I Am Interested</p>
                 </div>
                 <div id="adopt-info" className="species">
                   species: {this.props.user.species}

@@ -31,3 +31,12 @@
   background-color: white;
   color: gray;
 }
+
+#interest-titleprofile {
+  font-size: 30px;
+}
+
+#userprofiletext {
+  font-family: "Bitter", serif;
+  font-size: 17;
+}

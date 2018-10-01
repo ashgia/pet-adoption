@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import UploadPic from "../UploadPic/UploadPic";
 import NavBarSide from "../NavBarSide/NavBarSide";
 import {
   Col,
@@ -87,10 +88,17 @@ class WizardFour extends Component {
                     Upload Photo
                   </Label>
                   <Col sm={10}>
-                    <Input
+                    {/* <Input
                       type="file"
                       name="file"
                       id="uploadPhoto"
+                      onChange={e => this.props.updatePhotoURL(e.target.value)}
+                    />
+                    <FormText color="muted">
+                      Import a photo for your profile page.
+                    </FormText>
+                  </Col> */}
+                    <UploadPic
                       onChange={e => this.props.updatePhotoURL(e.target.value)}
                     />
                     <FormText color="muted">

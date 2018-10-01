@@ -46,7 +46,7 @@ class Chat extends Component {
 
     let user = {
       id: this.props.match.params.user,
-      name: this.props.user.fullname || "Ashley"
+      name: this.props.user.fullname || "Arya"
     };
 
     socket.emit(USER_CONNECTED, user);

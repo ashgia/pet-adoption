@@ -6,7 +6,7 @@
   position: absolute;
   height: 100%;
   width: 70%;
-  background-color: rgba(240, 246, 79, 0.966);
+  background-color: rgba(228, 200, 253, 0.966);
 }
 
 .shelterprofile-mainbox {
@@ -224,5 +224,15 @@ p {
   /* justify-content: flex-start; */
   margin: auto;
   font-size: 32px;
+  font-family: "Bitter", serif;
+}
+
+#sheltertext {
+  font-size: 20px;
+  font-family: "Bitter", serif;
+}
+
+#sheltertextsmall {
+  font-size: 15px;
   font-family: "Bitter", serif;
 }
