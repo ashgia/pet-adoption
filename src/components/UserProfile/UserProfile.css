@@ -1,11 +1,22 @@
-.body-profile-page {
-  display: flex;
+#adopt-info {
+  /* display: flex; */
+  /* justify-content: flex-start; */
+
+  font-family: "Bitter", serif;
+  font-size: 15px;
 }
 
-.profile-introduction {
+#save-button {
+  margin-left: 20px;
+  height: 20px;
+  font-size: 15px;
+  /* margin: auto; */
   display: flex;
-}
-
-.profile-introduction-background {
-  background: #ffe971;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-family: "Bitter", serif;
+  border-radius: 2px;
+  /* margin: 1px; */
+  background-color: white;
+  color: gray;
 }

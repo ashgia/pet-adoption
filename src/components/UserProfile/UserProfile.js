@@ -18,6 +18,7 @@ import {
   updateAge,
   updateGoodWith
 } from "../../ducks/userReducer";
+import "./UserProfile.css";
 
 class UserProfile extends Component {
   constructor(props) {
@@ -80,9 +81,17 @@ class UserProfile extends Component {
     let button;
 
     if (this.state.mode === "view") {
-      button = <button onClick={this.handleEdit}>Edit</button>;
+      button = (
+        <button id="edit" onClick={this.handleEdit}>
+          Edit
+        </button>
+      );
     } else {
-      button = <button onClick={() => this.handleSave(cb)}>Save</button>;
+      button = (
+        <button id="save-button" onClick={() => this.handleSave(cb)}>
+          Save
+        </button>
+      );
     }
 
     return button;
@@ -93,119 +102,138 @@ class UserProfile extends Component {
   }
   render() {
     return (
-      <div className="body-profile-page">
+      <div className="userprofile-body">
+        <div className="userprofile-boxcolor" />
         <div className="navbar">
           <NavBarSide />
         </div>
-        <div>
-          <h1>User Profile</h1>
-          <div className="profile-introduction">
-            <div className="profile-introduction-background">
-              <div clasName="introduction-inner">
-                <div className="aboutme">
-                  about me: {this.props.user.aboutMe}
-                  {this.renderInputField("aboutMe")}
+        <div className="shelterprofile-mainbox">
+          <div className="shelterprofile-mainbox-left">
+            <div className="user-pic-box">
+              <div className="user-pic-shelterprofile">
+                <div className="user-pic">
+                  {this.props.user.photoURL}
+                  {this.renderInputField("photoURL")}
                   {this.renderButton(() =>
-                    this.props.updateAboutMe(this.state.aboutMe)
+                    this.props.updatePhotoURL(this.state.photoURL)
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="profile-bottom-left">
+              <div className="profile-bottom-left-right">
+                <div className="info-title">
+                  <p>Information</p>
+                </div>
+                <div className="email">
+                  {this.props.user.email}
+                  {this.renderInputField("email")}
+                  {this.renderButton(() =>
+                    this.props.updateEmail(this.state.email)
+                  )}
+                </div>
+                <div className="phonenumber">
+                  {this.props.user.phoneNumber}
+                  {this.renderInputField("phoneNumber")}
+                  {this.renderButton(() =>
+                    this.props.updateNumber(this.state.phoneNumber)
                   )}
                 </div>
               </div>
             </div>
           </div>
-          <div className="user-mainbox">
-            <h1>Basic Info</h1>
-            <div className="user-name">
-              name: {this.props.user.fullname}
-              {this.renderInputField("fullname")}
-              {this.renderButton(() =>
-                this.props.updateName(this.state.fullname)
-              )}
-            </div>
-            <div className="user-pic">
-              photo: {this.props.user.photoURL}
-              {this.renderInputField("photoURL")}
-              {this.renderButton(() =>
-                this.props.updatePhotoURL(this.state.photoURL)
-              )}
-            </div>
-            <div className="city">
-              city: {this.props.user.city}
-              {this.renderInputField("city")}
-              {this.renderButton(() => this.props.updateCity(this.state.city))}
-            </div>
-          </div>
-          <div className="user-adoption-box">
-            <h1>Interested In Adopting:</h1>
-            <div className="species">
-              species: {this.props.user.species}
-              {this.renderInputField("species")}
-              {this.renderButton(() =>
-                this.props.updateSpecies(this.state.species)
-              )}
-            </div>
-            <div className="breed">
-              breed: {this.props.user.breed}
-              {this.renderInputField("breed")}
-              {this.renderButton(() =>
-                this.props.updateBreed(this.state.breed)
-              )}
-            </div>
-            <div className="gender">
-              gender: {this.props.user.gender}
-              {this.renderInputField("gender")}
-              {this.renderButton(() =>
-                this.props.updateGender(this.state.gender)
-              )}
-            </div>
-            <div className="color">
-              color: {this.props.user.color}
-              {this.renderInputField("color")}
-              {this.renderButton(() =>
-                this.props.updateColor(this.state.color)
-              )}
-            </div>
-            <div className="size">
-              size: {this.props.user.size}
-              {this.renderInputField("size")}
-              {this.renderButton(() => this.props.updateSize(this.state.size))}
-            </div>
-            <div className="age">
-              age: {this.props.user.age}
-              {this.renderInputField("age")}
-              {this.renderButton(() => this.props.updateAge(this.state.age))}
-            </div>
-            <div className="goodwith">
-              good with: {this.props.user.goodWith}
-              {this.renderInputField("goodwith")}
-              {this.renderButton(() =>
-                this.props.updateGoodWith(this.state.goodWith)
-              )}
-            </div>
-          </div>
-          <div className="user-personal-box">
-            <h1>About Me</h1>
 
-            <div className="living">
-              living situation:
-              {this.props.user.living}
-              {this.renderInputField("living")}
-              {this.renderButton(() =>
-                this.props.updateLiving(this.state.living)
-              )}
-            </div>
-            <div className="phonenumber">
-              phone Number: {this.props.user.phoneNumber}
-              {this.renderInputField("phoneNumber")}
-              {this.renderButton(() =>
-                this.props.updateNumber(this.state.phoneNumber)
-              )}
-            </div>
-            <div className="email">
-              email: {this.props.user.email}
-              {this.renderInputField("email")}
-              {this.renderButton(() =>
-                this.props.updateEmail(this.state.email)
-              )}
+          <div className="shelterprofile-mainbox-right">
+            <div className="profile-right">
+              <div className="profile-top-top">
+                <div className="user-name-shelterprofile">
+                  {this.props.user.fullname}
+                  {this.renderInputField("fullname")}
+                  {this.renderButton(() =>
+                    this.props.updateName(this.state.fullname)
+                  )}
+                </div>
+                <div className="cityprofile">
+                  {this.props.user.city}
+                  {this.renderInputField("city")}
+                  {this.renderButton(() =>
+                    this.props.updateCity(this.state.city)
+                  )}
+                </div>
+                <div className="profile-top">
+                  <div className="aboutme-title">
+                    <p>About Me</p>
+                  </div>
+                  <div className="aboutme-userprofile">
+                    {this.props.user.aboutMe}
+                    {this.renderInputField("aboutMe")}
+                    {this.renderButton(() =>
+                      this.props.updateAboutMe(this.state.aboutMe)
+                    )}
+                  </div>
+                  <div className="living">
+                    {this.props.user.living}
+                    {this.renderInputField("living")}
+                    {this.renderButton(() =>
+                      this.props.updateLiving(this.state.living)
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="profile-middle">
+                <div className="interest-title">
+                  <p>I Am Interested</p>
+                </div>
+                <div id="adopt-info" className="species">
+                  species: {this.props.user.species}
+                  {this.renderInputField("species")}
+                  {this.renderButton(() =>
+                    this.props.updateSpecies(this.state.species)
+                  )}
+                </div>
+                <div id="adopt-info" className="breed">
+                  breed: {this.props.user.breed}
+                  {this.renderInputField("breed")}
+                  {this.renderButton(() =>
+                    this.props.updateBreed(this.state.breed)
+                  )}
+                </div>
+                <div id="adopt-info" className="gender">
+                  gender: {this.props.user.gender}
+                  {this.renderInputField("gender")}
+                  {this.renderButton(() =>
+                    this.props.updateGender(this.state.gender)
+                  )}
+                </div>
+                <div id="adopt-info" className="color">
+                  color: {this.props.user.color}
+                  {this.renderInputField("color")}
+                  {this.renderButton(() =>
+                    this.props.updateColor(this.state.color)
+                  )}
+                </div>
+                <div id="adopt-info" className="size">
+                  size: {this.props.user.size}
+                  {this.renderInputField("size")}
+                  {this.renderButton(() =>
+                    this.props.updateSize(this.state.size)
+                  )}
+                </div>
+                <div id="adopt-info" className="age">
+                  age: {this.props.user.age}
+                  {this.renderInputField("age")}
+                  {this.renderButton(() =>
+                    this.props.updateAge(this.state.age)
+                  )}
+                </div>
+                <div id="adopt-info" className="goodwith">
+                  good with: {this.props.user.goodWith}
+                  {this.renderInputField("goodwith")}
+                  {this.renderButton(() =>
+                    this.props.updateGoodWith(this.state.goodWith)
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>

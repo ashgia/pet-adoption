@@ -198,6 +198,21 @@ p {
   color: gray;
 }
 
+#save-button {
+  margin-left: 20px;
+  height: 20px;
+  font-size: 15px;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-family: "Bitter", serif;
+  border-radius: 2px;
+  /* margin: 1px; */
+  background-color: white;
+  color: gray;
+}
+
 .add-pets-box {
   display: flex;
   flex-direction: column;
