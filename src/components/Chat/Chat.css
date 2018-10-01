@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Bitter", serif;
   height: 100%;
 }
+
 input,
 textarea {
-  font-family: "Rubik", sans-serif;
+  font-family: "Bitter", serif;
 }
 .login {
   width: 100%;
@@ -48,21 +49,23 @@ textarea {
   align-items: flex-start;
   height: 90vh;
   width: 100%;
-  color: #fffafa;
+  color: #dea5a5;
   font-family: "Rubik", sans-serif;
   animation: fade-in 0.3s both;
 }
 #side-bar {
+  font-family: "Bitter", serif;
   box-sizing: border-box;
   width: 33.75%;
   height: 90vh;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  color: black;
+  color: rgb(0, 0, 0);
   border: solid lightgrey 1px;
 }
 #side-bar .heading {
+  font-family: "Bitter", serif;
   box-sizing: border-box;
   height: 12vh;
   max-height: 65px;
@@ -71,17 +74,17 @@ textarea {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: rgb(251, 186, 186);
   border: solid lightgrey 1px;
 }
 #side-bar .search {
-  background: rgb(228, 227, 227);
+  background: rgb(251, 186, 186);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: solid lightgrey 1px;
+  /* border: solid lightgrey 1px; */
   padding-left: 15px;
   padding-right: 20px;
   height: 10vh;
@@ -95,7 +98,7 @@ textarea {
 }
 #side-bar .search input {
   width: 100%;
-  background: rgb(228, 227, 227);
+  background: rgb(251, 186, 186);
   flex-grow: 1;
   box-sizing: border-box;
   border: none;
@@ -138,7 +141,7 @@ textarea {
 }
 #side-bar .users {
   overflow-y: scroll;
-  background: white;
+  background: rgb(251, 186, 186);
   flex-grow: 1;
 }
 #side-bar .users::-webkit-scrollbar-track {
@@ -161,7 +164,7 @@ textarea {
 }
 #side-bar .users .user.active,
 #side-bar .users .user:hover {
-  background-color: white;
+  background-color: rgb(246, 224, 224);
 }
 #side-bar .users .user:hover:not(.active) {
   cursor: pointer;
@@ -184,7 +187,7 @@ textarea {
 }
 #side-bar .current-user {
   align-items: center;
-  background-color: white;
+  background-color: rgb(251, 186, 186);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -193,7 +196,6 @@ textarea {
   justify-content: space-between;
   padding-left: 16px;
   padding-right: 16px;
-  border: solid lightgrey 1px;
 }
 #side-bar .current-user .logout {
   align-items: center;
@@ -203,6 +205,7 @@ textarea {
   font-size: 2em;
 }
 .chat-header {
+  background-color: rgb(251, 186, 186);
   box-shadow: 0px 6px 5px -2px rgba(225, 225, 225, 0.7);
   box-sizing: border-box;
   display: flex;
@@ -275,7 +278,7 @@ textarea {
   background-color: green;
 }
 .thread-container::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: rgb(251, 186, 186);
 }
 .thread-container .thread {
   position: relative;
@@ -285,7 +288,7 @@ textarea {
   flex-direction: column;
   justify-content: flex-end;
   color: #b3b2ca;
-  background-color: #ffffff;
+  background-color: #f8d7d7;
 }
 .message-container {
   display: flex;
@@ -308,7 +311,7 @@ textarea {
   text-align: right;
 }
 .message-container .message {
-  background: #30415d;
+  background: rgb(203, 122, 122);
   border-radius: 5px;
   border-top-left-radius: 0;
   box-sizing: border-box;
@@ -373,7 +376,7 @@ textarea {
 }
 .message-input {
   background: white;
-  color: #484d79;
+  color: #cf6766;
   box-sizing: border-box;
   height: 10vh;
   max-height: 65px;

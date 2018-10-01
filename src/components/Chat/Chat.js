@@ -6,6 +6,7 @@ import SetUser from "./setUser";
 import ChatContainer from "./chats/ChatContainer";
 import "./Chat.css";
 import { getProfile } from "../../ducks/userReducer";
+import NavBarSide from "../NavBarSide/NavBarSide";
 
 const socketUrl = process.env.REACT_APP_SERVER;
 class Chat extends Component {
@@ -61,19 +62,24 @@ class Chat extends Component {
   render() {
     const { socket, user } = this.state;
     return (
-      <div className="container">
-        {!user ? (
-          <SetUser socket={socket} setUser={this.setUser} />
-        ) : (
-          //if there is a user, then we're going to put a chat container on the dom
-          //it gets a socket, a user, and a logout function
-          <ChatContainer
-            userName={this.state.userName}
-            socket={socket}
-            user={user}
-            logout={this.logout}
-          />
-        )}
+      <div className="chat-body">
+        <div className="navbar">
+          <NavBarSide />
+        </div>
+        <div className="container">
+          {!user ? (
+            <SetUser socket={socket} setUser={this.setUser} />
+          ) : (
+            //if there is a user, then we're going to put a chat container on the dom
+            //it gets a socket, a user, and a logout function
+            <ChatContainer
+              userName={this.state.userName}
+              socket={socket}
+              user={user}
+              logout={this.logout}
+            />
+          )}
+        </div>
       </div>
     );
   }

@@ -37,11 +37,7 @@ class NavBarSide extends Component {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                className="side-nav-link4"
-                tag={Link}
-                to={`/chat/${this.props.user.userid}`}
-              >
+              <NavLink className="side-nav-link4" tag={Link} to={"/chat"}>
                 Messages
               </NavLink>
             </NavItem>

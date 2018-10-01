@@ -41,5 +41,6 @@ export default (
     <Route path="/shelter/:id" component={ShelterDetails} />
     <Route path="/usershelter/:id" component={UserShelterProfile} />
     <Route path="/chat/:user/:shelter" component={Chat} />
+    <Route path="/chat" component={Chat} />
   </Switch>
 );

@@ -67,7 +67,7 @@ class HowItWorks extends Component {
               </div>
               <div className="howitworks3-info">
                 <p>
-                  Getting a furry friend was a huge commitment.I understood the
+                  Getting a furry friend was a huge commitment. I understood the
                   commitment and perseverance it would take to raise a puppy but
                   I could have never imagined the amount of joy I have
                   experienced throughout this process. Tulu is a cocker spaniel

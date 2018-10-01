@@ -9,9 +9,7 @@ import {
   CardTitle,
   CardText,
   CardDeck,
- 
   CardSubtitle,
-
   CardBody,
   Col,
   Row,
@@ -101,9 +99,16 @@ class Users extends Component {
             </div>
             <div className="users-info">
               <p>
-                Wobbegong shark peaclam swimming. Peppered moray clownfish
-                hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                soldierfish banded sole jump.
+                As a shelter, Tulu’s Friends have made it easier more than ever
+                for you to view potential adopters and their animal preferences.
+                Tulu’s Friends simplifies the connection between your shelter
+                and the numerous potential adopters in your area to increase the
+                likelihood of finding the perfect match and completing an
+                adoption. For every new or existing animal you have in the
+                shelter, sort the potential adopters by the type of animals they
+                are interested in that fit the animals’ respective description
+                and you will see all of the potential adopters’ contact info on
+                their cards.
               </p>
             </div>
             <div className="search-input-container">
