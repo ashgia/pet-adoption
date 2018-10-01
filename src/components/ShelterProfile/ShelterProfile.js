@@ -115,6 +115,7 @@ class ShelterProfile extends Component {
   }
   render() {
     console.log(this.props);
+    console.log(this.state);
     console.log(this.state.pets);
     let petsDisplay = [];
     this.state.pets.length > 0
@@ -164,7 +165,8 @@ class ShelterProfile extends Component {
           <div className="shelterprofile-mainbox-left">
             <div className="user-pic-box">
               <div className="user-pic-shelterprofile">
-                <img src={this.props.user.photoURL} />
+                <img src="https://pbs.twimg.com/profile_images/1396578735/Screen_shot_2011-06-14_at_10.05.54_PM_400x400.png" />
+                {/* <img src={this.props.user.photoURL} /> */}
                 {this.renderInputField("photoURL")}
                 {this.renderButton(() =>
                   this.props.updatePhotoURL(this.state.photoURL)
