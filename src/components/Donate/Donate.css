@@ -42,16 +42,24 @@
 .donate2-image {
   display: flex;
   position: absolute;
-  margin-left: 150px;
+  margin-top: 20px;
+  margin-left: 170px;
 }
 
+#featured-shelter-name {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Bitter", serif;
+  margin-bottom: 0;
+  font-size: 50px;
+}
 .donate2-text {
   display: flex;
   flex-direction: column;
   width: 390px;
   margin-left: auto;
-  margin-right: 170px;
-  margin-top: 430px;
+  margin-right: 350px;
+  margin-top: 300px;
 }
 
 .donate2-title {
@@ -61,6 +69,7 @@
   margin-bottom: 0;
   font-size: 17px;
   height: 30px;
+  color: gray;
 }
 
 .donate2-info {
@@ -76,7 +85,7 @@
 .donate3-image {
   display: flex;
   position: absolute;
-  margin-left: 590px;
+  margin-left: 680px;
   margin-top: 150px;
   margin-bottom: 200px;
 }

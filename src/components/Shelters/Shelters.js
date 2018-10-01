@@ -93,11 +93,12 @@ class Shelters extends Component {
             </div>
             <div className="shelters-info">
               <p>
-                Wobbegong shark peaclam swimming. Peppered moray clownfish
-                hawkfish at seahorse hammerhead a funny snake eel. Colorful
-                soldierfish banded sole jump. Colorful soldierfish banded sole
-                jump. Wobbegong shark peaclam swimming. Peppered moray clownfish
-                hawkfish at seahorse hammerhead a funny snake eel.
+                We know how tedious it can be to research and find animal
+                shelters that is convenient for potential adopters. Luckily,
+                Tulu’s Friends is designed so that potential adopters are able
+                to browse shelters by location with ease. Simply type in the
+                city you are located in and view the shelters’ cards for their
+                listing of animals.
               </p>
             </div>
             <div className="search-input-container">
