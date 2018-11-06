@@ -1,3 +1,4 @@
-
-
-![photo1](https://imgur.com/np6LXGg)
+<p align="center">
+  <img src="https://imgur.com/vxnDrs9" width="350" title="hover text">
+<!--   <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text"> -->
+</p>
