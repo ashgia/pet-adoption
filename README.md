@@ -1,3 +1,1 @@
-https://imgur.com/vxnDrs9
-
-https://imgur.com/ULiMEUU
+![Front page view of photo management website and demonstration of search modal](https://imgur.com/vxnDrs9)
